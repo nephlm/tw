@@ -201,6 +201,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/editpreviewtype</li>
+
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
@@ -242,6 +244,8 @@ Error message and password prompt
 <li>Nasuni Bookmarks</li>
 
 <li>People</li>
+
+<li>Questions</li>
 
 <li>Repos</li>
 
@@ -10577,8 +10581,11 @@ html .tc-topmenu .tc-tag-label {
 <div created="20160515025917710" modified="20220929173136002" title="$:/SiteTitle">
 <pre>Nasuni</pre>
 </div>
-<div created="20220929211327431" modified="20220930155017509" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20221003204059936" modified="20221003204106612" title="$:/state/editpreviewtype">
+<pre>$:/core/ui/EditTemplate/body/preview/output</pre>
+</div>
+<div created="20220929211327431" modified="20221003204102394" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20220929201528146" modified="20220929201535396" title="$:/state/sidebar">
 <pre>no</pre>
@@ -10601,7 +10608,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20221003175644849" list="Acronyms [[Nasuni Bookmarks]] [[External Bookmarks]]" modified="20221003193403708" title="$:/StoryList">
+<div created="20221003175644849" list="Questions Acronyms [[Nasuni Bookmarks]] [[External Bookmarks]]" modified="20221003193403708" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10861,6 +10868,15 @@ html .tc-topmenu .tc-tag-label {
 <div created="20220930143538525" modified="20220930143742931" tags="menu" title="People">
 <pre>* Stephen Zangeri-Salter - Product Owner (?)
 ** Robert (Bob) Curly - Stephen's Boss.</pre>
+</div>
+<div created="20221003203912034" modified="20221003205719854" tags="menu" title="Questions">
+<pre>* deploy.nasuni.net
+** Do torn down VMs ever get purged, or is there something I'm supposed to do purge them manually?
+** Is there anyway to change my password on this webpage?
+* Release
+** Is joust 9.9 or 9.10; what branch should I be using to test joust RC1?
+** In general what is the git strategy?
+*** Is the expectation that we'll create feature branches, merge them into a `rocket/&lt;code name&gt;` branch and that goes into an RC branch, or something else.</pre>
 </div>
 <div created="20220929173535951" modified="20220929211341532" tags="menu" title="Repos">
 <pre>* Bitbucket - https://git.nasuni.net/dashboard
