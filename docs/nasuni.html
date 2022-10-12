@@ -10447,7 +10447,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20221004201113855" list="[[Nasuni Bookmarks]] [[SSH into NMC]] [[Django Upgrade]] Tests [[External Bookmarks]]" modified="20221007143523369" title="$:/StoryList">
+<div created="20221004201113855" list="[[skipped tests]] [[Nasuni Bookmarks]] [[SSH into NMC]] [[Django Upgrade]] Tests [[External Bookmarks]]" modified="20221012140607846" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10771,8 +10771,16 @@ Pip extra Index: http://ci.auto.nasuni.net/simple/
 pip3 install --user --trusted-host ci.auto.nasuni.net --extra-index-url http://ci.auto.nasuni.net/simple/ ntlie.nmc-api-wrapper
 ```</pre>
 </div>
-<div created="20221006151203671" modified="20221006181301334" tags="Notes" title="skipped tests">
-<pre>* Fails for me as well in the same way. 
+<div created="20221006151203671" modified="20221012140819910" tags="Notes" title="skipped tests">
+<pre>services/ransomware/mitigation/test_nmc_ui_mitigation_special_configurations.py
+
+```
+E   _pytest.config.exceptions.UsageError: Attempting to use env_setup without passing in any environment configuration
+```
+
+
+
+* Fails for me as well in the same way. 
 ** 17050
 ** 17051
 ** 17052</pre>
