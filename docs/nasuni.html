@@ -10771,13 +10771,14 @@ Pip extra Index: http://ci.auto.nasuni.net/simple/
 pip3 install --user --trusted-host ci.auto.nasuni.net --extra-index-url http://ci.auto.nasuni.net/simple/ ntlie.nmc-api-wrapper
 ```</pre>
 </div>
-<div created="20221006151203671" modified="20221012140819910" tags="Notes" title="skipped tests">
+<div created="20221006151203671" modified="20221012141106279" tags="Notes" title="skipped tests">
 <pre>services/ransomware/mitigation/test_nmc_ui_mitigation_special_configurations.py
 
 ```
 E   _pytest.config.exceptions.UsageError: Attempting to use env_setup without passing in any environment configuration
 ```
 
+There is an `--env-cfg` argument to pytest (nasuni config), but it is defined only that it can be json, or a path to a json file, so far I haven't been able to find a confluence page providing details of what it should be, assuming it is even the issue.  
 
 
 * Fails for me as well in the same way. 
