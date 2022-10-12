@@ -255,11 +255,11 @@ Error message and password prompt
 
 <li>Repos</li>
 
-<li>skipped tests</li>
-
 <li>SSH into NMC</li>
 
 <li>StyleSheet</li>
+
+<li>Test Issues</li>
 
 <li>Tests</li>
 
@@ -10447,7 +10447,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20221004201113855" list="[[skipped tests]] [[Nasuni Bookmarks]] [[SSH into NMC]] [[Django Upgrade]] Tests [[External Bookmarks]]" modified="20221012140607846" title="$:/StoryList">
+<div created="20221004201113855" list="[[Test Issues]] [[Nasuni Bookmarks]] [[SSH into NMC]] [[Django Upgrade]] Tests [[External Bookmarks]]" modified="20221012140607846" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10771,22 +10771,6 @@ Pip extra Index: http://ci.auto.nasuni.net/simple/
 pip3 install --user --trusted-host ci.auto.nasuni.net --extra-index-url http://ci.auto.nasuni.net/simple/ ntlie.nmc-api-wrapper
 ```</pre>
 </div>
-<div created="20221006151203671" modified="20221012142811923" tags="Notes" title="skipped tests">
-<pre>services/ransomware/mitigation/test_nmc_ui_mitigation_special_configurations.py
-
-```
-E   _pytest.config.exceptions.UsageError: Attempting to use env_setup without passing in any environment configuration
-```
-
-There is an `--env-cfg` argument to pytest (nasuni config), but it is defined only that it can be json, or a path to a json file, so far I haven't been able to find a confluence page providing details of what it should be, assuming it is even the issue.  
-
----
-
-* Fails for me as well in the same way. 
-** 17050
-** 17051
-** 17052</pre>
-</div>
 <div created="20221006182448340" modified="20221006182738335" tags="Notes" title="SSH into NMC">
 <pre>ssh into a NMC
 
@@ -11019,6 +11003,22 @@ ssh root@&lt;ip address&gt; -p 222
 .BGTertiaryMid	  { background-color:[[ColorPalette::TertiaryMid]];	}
 .BGTertiaryDark	  { background-color:[[ColorPalette::TertiaryDark]];	}
 .BGError	  { background-color:[[ColorPalette::Error]];	 	}</pre>
+</div>
+<div created="20221006151203671" modified="20221012142836887" tags="Notes" title="Test Issues">
+<pre>services/ransomware/mitigation/test_nmc_ui_mitigation_special_configurations.py
+
+```
+E   _pytest.config.exceptions.UsageError: Attempting to use env_setup without passing in any environment configuration
+```
+
+There is an `--env-cfg` argument to pytest (nasuni config), but it is defined only that it can be json, or a path to a json file, so far I haven't been able to find a confluence page providing details of what it should be, assuming it is even the issue.  
+
+---
+
+* Fails for me as well in the same way. 
+** 17050
+** 17051
+** 17052</pre>
 </div>
 <div created="20221005152705219" modified="20221005152933415" tags="menu" title="Tests">
 <pre>Successful pytest automation run
