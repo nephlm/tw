@@ -11020,14 +11020,15 @@ There is an `--env-cfg` argument to pytest (nasuni config), but it is defined on
 ** 17051
 ** 17052</pre>
 </div>
-<div created="20221005152705219" modified="20221005152933415" tags="menu" title="Tests">
+<div created="20221005152705219" modified="20221012145916605" tags="menu" title="Tests">
 <pre>Successful pytest automation run
 
 ```
-pytest --nmc_ip 10.66.175.9 --nmc_username admin --nmc_password admin  --driver chrome --log-file-level INFO --log-cli-level INFO --headless --noc_username tkusterer@nasuni.com --noc_password $NOC_PW --jtm-execution-user tkusterer@nasuni.com --jtm-report-id UNTY-R7830 control_path/qman/test_nmc_api_qman.py::test_filer_qman_reloads_creds_during_startup
+pytest --nmc_ip 10.66.175.9 --nmc_username admin --nmc_password admin  --driver chrome --log-file-level INFO --log-cli-level INFO --headless --noc_username tkusterer@nasuni.com --noc_password $NOC_PW --hostname rocket3.auto.nasuni.net --jtm-execution-user tkusterer@nasuni.com --jtm-report-id UNTY-R7830 control_path/qman/test_nmc_api_qman.py::test_filer_qman_reloads_creds_during_startup
 ```
 
-* With `--jtm-*` fields the results will be reported to Zephyr</pre>
+* With `--jtm-*` fields the results will be reported to Zephyr
+* `--hostname` can be `rocket[2-4].auto.nasuni.net` One of our esc boxes.</pre>
 </div>
 
 
