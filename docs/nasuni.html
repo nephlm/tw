@@ -245,6 +245,8 @@ Error message and password prompt
 
 <li>External Bookmarks</li>
 
+<li>Logs</li>
+
 <li>Nasuni Bookmarks</li>
 
 <li>Notes</li>
@@ -10447,7 +10449,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20221004201113855" list="Acronyms [[Test Issues]] [[Nasuni Bookmarks]] [[SSH into NMC]] [[Django Upgrade]] Tests [[External Bookmarks]]" modified="20221012145936129" title="$:/StoryList">
+<div created="20221004201113855" list="Logs Acronyms [[Test Issues]] [[Nasuni Bookmarks]] [[SSH into NMC]] [[Django Upgrade]] Tests [[External Bookmarks]]" modified="20221012145936129" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10701,6 +10703,16 @@ html .tc-topmenu .tc-tag-label {
 * [[Darker|https://github.com/akaihola/darker\]] - Partial Dark, only changed lines.
 * [[Python 2/3|https://python-future.org/compatible_idioms.html]] - python 2/3 compatible idioms
 * [[Vue courses|https://www.vuemastery.com/courses/build-a-blog-nuxt3-content/nuxt3-blog-introduction/]]</pre>
+</div>
+<div created="20221021143831356" modified="20221021144238245" tags="Notes" title="Logs">
+<pre>* `/var/log/nasuni/qman.log` and `/var/log/nasuni/qman-receivers/*.log` for what qman is doing.
+* `/var/log/nasuni/account-tasks.cron` for the 10-minute new filer discover job.
+* `/var/log/nasuni/nmc_ui.log` for the NMC UI.
+* `/var/log/nasuni/taskman.log`, for root commands run on behalf of the NMC UI (which runs as apache).
+* `/var/log/messages` for systemctl service state.
+
+`account_tasks.py` nad `check_management_states.py`: managed discovery.
+</pre>
 </div>
 <div created="20220930154859468" modified="20221004210238786" tags="Bookmarks" title="Nasuni Bookmarks">
 <pre>* [[Okta Login|https://nasuni.okta.com/login/login.htm?fromURI=%2Fapp%2FUserHome]]
