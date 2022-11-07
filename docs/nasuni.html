@@ -259,6 +259,8 @@ Error message and password prompt
 
 <li>People</li>
 
+<li>PM-944 - Django 1.11 upgrade</li>
+
 <li>Questions</li>
 
 <li>Repos</li>
@@ -272,8 +274,6 @@ Error message and password prompt
 <li>Tests</li>
 
 <li>Unable to manage filer to NMC</li>
-
-<li>UNTY-944 - Django 1.11 upgrade</li>
 
 </ul>
 </p>
@@ -10465,7 +10465,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20221004201113855" list="Meetings [[UNTY-944 - Django 1.11 upgrade]] [[Unable to manage filer to NMC]] Logs Acronyms [[Test Issues]] [[Nasuni Bookmarks]] [[SSH into NMC]] [[Django Upgrade]] Tests [[External Bookmarks]]" modified="20221012145936129" title="$:/StoryList">
+<div created="20221004201113855" list="Meetings [[PM-944 - Django 1.11 upgrade]] [[Unable to manage filer to NMC]] Logs Acronyms [[Test Issues]] [[Nasuni Bookmarks]] [[SSH into NMC]] [[Django Upgrade]] Tests [[External Bookmarks]]" modified="20221012145936129" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10776,6 +10776,18 @@ html .tc-topmenu .tc-tag-label {
 <pre>* Stephen Zangeri-Salter - Product Owner (?)
 ** Robert (Bob) Curly - Stephen's Boss.</pre>
 </div>
+<div created="20221107181700689" modified="20221107190320145" tags="Meetings" title="PM-944 - Django 1.11 upgrade">
+<pre>* Cached Objects -  DR testing, upgrade
+** configdb
+** upgrade through a reboot, so memory cache is cleared.
+* Who should we talk about changes to the testing framework.
+* Testplan updating plan; 
+** Link MVIs to test page.
+** Run tests to get baseline
+* PoC (?)
+** Isn't really feasible given the context. 
+</pre>
+</div>
 <div created="20221003203912034" modified="20221004200314216" tags="menu" title="Questions">
 <pre>* deploy.nasuni.net
 ** Do torn down VMs ever get purged, or is there something I'm supposed to do purge them manually?
@@ -11076,18 +11088,6 @@ qman.log repeats this cycle repeatedly.
 2022-10-21 10:29:20,943 : ERROR   : at webapi.py line 1200: api error: url: https://creds.dev.api.nasuni.com/sqs/creds?serial_number=01e4e7d4-fe81-446d-b6a8-56d55779e5c1&amp;serial_secret=c**********************************7&amp;build=22.3-41&amp;filer_guid=3936b245-e1d3-4cad-946d-630496a622b7&amp;boot_id=bb842ea5-0c97-4c5f-b166-40f39ac21f2a
 2022-10-21 10:29:20,943 : ERROR   : at webapi.py line 1201: api error: body: 
 2022-10-21 10:29:20,943 : WARNING : at qman line 188: SQS credentials are not yet available. Sleeping 10 seconds```</pre>
-</div>
-<div created="20221107181700689" modified="20221107190138952" tags="Meetings" title="UNTY-944 - Django 1.11 upgrade">
-<pre>* Cached Objects -  DR testing, upgrade
-** configdb
-** upgrade through a reboot, so memory cache is cleared.
-* Who should we talk about changes to the testing framework.
-* Testplan updating plan; 
-** Link MVIs to test page.
-** Run tests to get baseline
-* PoC (?)
-** Isn't really feasible given the context. 
-</pre>
 </div>
 
 
