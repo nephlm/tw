@@ -251,6 +251,8 @@ Error message and password prompt
 
 <li>External Bookmarks</li>
 
+<li>How To</li>
+
 <li>Logs</li>
 
 <li>Meetings</li>
@@ -10467,7 +10469,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20221128193903593" list="[[Code Layout]] [[Nasuni Bookmarks]]" modified="20221128193903593" title="$:/StoryList">
+<div created="20221128193903593" list="[[How To]] [[Code Layout]] [[Nasuni Bookmarks]]" modified="20221128193903593" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10742,6 +10744,15 @@ html .tc-topmenu .tc-tag-label {
 * [[Darker|https://github.com/akaihola/darker\]] - Partial Dark, only changed lines.
 * [[Python 2/3|https://python-future.org/compatible_idioms.html]] - python 2/3 compatible idioms
 * [[Vue courses|https://www.vuemastery.com/courses/build-a-blog-nuxt3-content/nuxt3-blog-introduction/]]</pre>
+</div>
+<div created="20221207154916247" modified="20221207155239160" tags="Notes" title="How To">
+<pre>!! Create Envvars for particular service
+
+* is there an easy way to set the environment variables that a service will be started with?
+** Yes.  You can add [it]() as a drop-in for whatever service file - create a file of `/etc/systemd/$service.d/99-Logging.conf` with a `[Service]` section containing `Environment=key=value`
+* (obviously substitute `$service` with the actual name of whatever service, so for instance for apache you'd have `httpd.service.d` as the directory name)
+
+</pre>
 </div>
 <div created="20221021143831356" modified="20221021144238245" tags="Notes" title="Logs">
 <pre>* `/var/log/nasuni/qman.log` and `/var/log/nasuni/qman-receivers/*.log` for what qman is doing.
