@@ -255,6 +255,8 @@ Error message and password prompt
 
 <li>Logs</li>
 
+<li>Lost Account Key</li>
+
 <li>Meetings</li>
 
 <li>Nasuni Bookmarks</li>
@@ -10469,7 +10471,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20221213155054513" list="Tests [[External Bookmarks]] [[Nasuni Bookmarks]]" modified="20230103211617341" title="$:/StoryList">
+<div created="20230210222046856" list="[[Lost Account Key]] Tests Questions [[Unable to manage filer to NMC]] [[SSH into NMC]] [[PM-446 - Django 1.11 upgrade]] [[How To]] [[Test Issues]]" modified="20230210222224226" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10764,6 +10766,16 @@ html .tc-topmenu .tc-tag-label {
 
 `account_tasks.py` nad `check_management_states.py`: managed discovery.
 </pre>
+</div>
+<div created="20230210223332903" modified="20230210223740946" tags="Notes" title="Lost Account Key">
+<pre>Tests hang on `get_account_key.sh`. May see `We do not have the account key` and/or `Will wait. Account key exists but no one has posted it for us`
+
+from: https://nasuni.slack.com/archives/C090HTKPG/p1583438227066800
+
+&gt;Looks like you have a few old filers on your account that have been offline for a while. Normally one of them would be expected to post it for the new filers. If any of those are still around, bringing one up and running get-account-key.sh on that one, followed by the new ones, should do it.
+
+&gt;Otherwise, I believe you can `make-account-key.sh --account-guid &lt;account_guid&gt; --force` on one of the new filers to regenerate the key, and then `get-account-key.sh` on that one followed by all the others. That's just from memory, so please let us know if it works or not.
+```</pre>
 </div>
 <div created="20221107182218301" modified="20221107182226656" tags="Notes" title="Meetings">
 <pre></pre>
