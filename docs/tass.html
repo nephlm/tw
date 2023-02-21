@@ -10538,7 +10538,7 @@ margin-right:5px;
      display: none;
 }</pre>
 </div>
-<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230221033155486" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
+<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230221035641910" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" tags="$:/tags/Stylesheet" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
 <pre>&lt;pre&gt;/* LEFT MENU */
 /* STORY-RIVER */
 html .tc-story-river {
@@ -10691,8 +10691,8 @@ html .tc-topmenu .tc-tag-label {
 <div created="20230202020751318" modified="20230206044434609" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20230202013716876" modified="20230221033155486" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20230202013716876" modified="20230221035641911" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20210304080231971" modified="20230202064324442" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
@@ -10727,7 +10727,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230221024546953" list="[[Draft of 'New Tiddler']] [[Aether Automated Defense]] Incursions Demons Brainstorming" modified="20230221035411765" title="$:/StoryList">
+<div created="20230221024546953" list="Organizations [[Draft of 'New Tiddler']] [[Aether Automated Defense]] Incursions Demons Brainstorming" modified="20230221035643558" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12337,9 +12337,24 @@ The Order's main fascilities are the [[Morgan Educational Center]] north of [[Ol
 
 The Order, and mostly Victor, are funded by a 30% required tithing for members.  Beyond a certain level this means turning over financial data to the Order's accountants.  Any useful skill is also assumed to be made available to the church free of charge.  </pre>
 </div>
-<div created="20230220044916040" modified="20230220044956512" tags="menu" title="Organizations">
+<div created="20230220044916040" modified="20230221035818808" tags="menu" title="Organizations">
 <pre>|! Primary Organizations|! Major Organizations|! Minor Organizations |
 |^&lt;$list filter=&quot;[tag[primary]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |^&lt;$list filter=&quot;[tag[major]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |^&lt;$list filter=&quot;[tag[minor]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |
+
+!!! Companies
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[company]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+!!! Government
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[government]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!!Trivial 
 
 @@.threecolumns
 &lt;$list filter=&quot;[tag[trivial]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
