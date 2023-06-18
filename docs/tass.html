@@ -193,6 +193,8 @@ Error message and password prompt
 
 <li>$:/plugins/tongerner/topleftmenu/leftmenu</li>
 
+<li>$:/plugins/tongerner/topleftmenu/leftmenu/entries</li>
+
 <li>$:/plugins/tongerner/topleftmenu/menu-template</li>
 
 <li>$:/plugins/tongerner/topleftmenu/topmenu</li>
@@ -10737,7 +10739,7 @@ margin-right:5px;
      display: none;
 }</pre>
 </div>
-<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230618180208471" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" tags="$:/tags/Stylesheet" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
+<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230618180404320" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
 <pre>&lt;pre&gt;/* LEFT MENU */
 /* STORY-RIVER */
 html .tc-story-river {
@@ -10776,6 +10778,16 @@ Menu
 &lt;/$scrollable&gt;
 
 &lt;/div&gt;</pre>
+</div>
+<div created="20230618180406026" modified="20230618180427042" tags="" title="$:/plugins/tongerner/topleftmenu/leftmenu/entries">
+<pre>\define slider(label)
+&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229E;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229F;&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
+&lt;$transclude mode=&quot;block&quot; /&gt;
+&lt;/$reveal&gt;
+\end
+
+&lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;</pre>
 </div>
 <div created="20150710114804977" creator="TonGerner" modified="20150710114808279" modifier="TonGerner" title="$:/plugins/tongerner/topleftmenu/menu-template">
 <pre>\define tag-styles()
@@ -10882,8 +10894,8 @@ html .tc-topmenu .tc-tag-label {
 <div created="20230202020751318" modified="20230311014608940" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20230202013716876" modified="20230618180208471" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20230202013716876" modified="20230618180404323" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20230618170559542" modified="20230618170620501" title="$:/state/tab--1963855381">
 <pre>$:/snippets/LayoutSwitcher</pre>
@@ -10936,7 +10948,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230618070052751" list="$:/plugins/tongerner/topleftmenu/leftmenu $:/plugins/tongerner/topleftmenu/left-menu-show-styles Dictionary Numina Tass Nomenclature Binder Imbuer Construct Shard [[Mt. Karcer]] [[Quintessence Craft]] Arcadia" modified="20230618172313849" title="$:/StoryList">
+<div created="20230618070052751" list="$:/plugins/tongerner/topleftmenu/leftmenu/entries $:/plugins/tongerner/topleftmenu/leftmenu $:/plugins/tongerner/topleftmenu/left-menu-show-styles Dictionary Numina Tass Nomenclature Binder Imbuer Construct Shard [[Mt. Karcer]] [[Quintessence Craft]] Arcadia" modified="20230618172313849" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
