@@ -15381,9 +15381,9 @@ AKA: Splinters
 ** A sliver of luck cost $100-300, and it takes 25-50 chickens to make a //sliver//.  $500-1000 for a //drop//.  etc.
 ** Packaged in charms see [[Luck Merchants]].</pre>
 </div>
-<div created="20230618181015803" modified="20230618184457327" tags="template" title="slider">
+<div created="20230618181015803" modified="20230618184527012" tags="template" title="slider">
 <pre>\define slider(label)
-&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/right-arrow}}&amp;#x229E;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/down-arrow}}&amp;#x229F;&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
+&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/right-arrow}}&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/down-arrow}}&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
 &lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
 &lt;$transclude mode=&quot;block&quot; /&gt;
 &lt;/$reveal&gt;
