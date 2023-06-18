@@ -10739,7 +10739,7 @@ margin-right:5px;
      display: none;
 }</pre>
 </div>
-<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230618180404320" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
+<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230618180428815" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" tags="$:/tags/Stylesheet" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
 <pre>&lt;pre&gt;/* LEFT MENU */
 /* STORY-RIVER */
 html .tc-story-river {
@@ -10779,15 +10779,34 @@ Menu
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20230618180406026" modified="20230618180427042" tags="" title="$:/plugins/tongerner/topleftmenu/leftmenu/entries">
-<pre>\define slider(label)
-&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229E;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229F;&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
-&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
-&lt;$transclude mode=&quot;block&quot; /&gt;
-&lt;/$reveal&gt;
-\end
+<div created="20230618180406026" modified="20230618180520162" tags="" title="$:/plugins/tongerner/topleftmenu/leftmenu/entries">
+<pre>
+&lt;!--
+The tabs macro below is just for the demo wiki. Remove the tabs macro and add your own left menu entries according to the help below.
+For more information see http://tw5topleft.tiddlyspot.com/.
+--&gt;
 
-&lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;</pre>
+{{$:/core/ui/Buttons/new-tiddler}} {{$:/core/ui/Buttons/control-panel}} {{$:/core/ui/Buttons/save-wiki}}
+
+&lt;&lt;tabs &quot;[tag[Example]]&quot; &quot;Leftmenu-links&quot; &quot;$:/state/tab/entries&quot;  &quot;tabsstyle&quot;&gt;&gt;
+
+&lt;!-- LINKS AS MENU ENTRIES
+[[link 1]]&lt;br&gt;
+[[link 2]]&lt;br&gt;
+...
+--&gt;
+
+&lt;!-- TAGS AS MENU ENTRIES
+{{{ [tag[tag1]] }}}
+--&gt;
+
+&lt;!-- TAGPILLS AS MENU ENTRIES
+{{tagpill1||$:/core/ui/TagTemplate}}
+{{tagpill2||$:/core/ui/TagTemplate}}
+...
+--&gt;
+
+&lt;&lt;toc-selective-expandable 'menu'&gt;&gt;</pre>
 </div>
 <div created="20150710114804977" creator="TonGerner" modified="20150710114808279" modifier="TonGerner" title="$:/plugins/tongerner/topleftmenu/menu-template">
 <pre>\define tag-styles()
@@ -10894,8 +10913,8 @@ html .tc-topmenu .tc-tag-label {
 <div created="20230202020751318" modified="20230311014608940" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20230202013716876" modified="20230618180404323" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20230202013716876" modified="20230618180428817" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20230618170559542" modified="20230618170620501" title="$:/state/tab--1963855381">
 <pre>$:/snippets/LayoutSwitcher</pre>
