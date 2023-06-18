@@ -788,7 +788,7 @@ margin-right:5px;
 <div created="20160515031728119" modified="20160515051430616" title="$:/config/DefaultSidebarTab">
 <pre>Menu</pre>
 </div>
-<div created="20230618171305247" modified="20230618172619528" title="$:/config/Manager/Filter">
+<div created="20230618171305247" modified="20230618183512928" title="$:/config/Manager/Filter">
 <pre>toc</pre>
 </div>
 <div created="20230618171256799" modified="20230618172624329" title="$:/config/Manager/System">
@@ -10743,7 +10743,7 @@ margin-right:5px;
      display: none;
 }</pre>
 </div>
-<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230618182826433" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
+<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230618183752771" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" tags="$:/tags/Stylesheet" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
 <pre>&lt;pre&gt;/* LEFT MENU */
 /* STORY-RIVER */
 html .tc-story-river {
@@ -10916,8 +10916,8 @@ html .tc-topmenu .tc-tag-label {
 <div created="20230202020751318" modified="20230311014608940" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20230202013716876" modified="20230618182826433" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20230202013716876" modified="20230618183752771" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20230618170559542" modified="20230618170620501" title="$:/state/tab--1963855381">
 <pre>$:/snippets/LayoutSwitcher</pre>
@@ -10940,11 +10940,11 @@ html .tc-topmenu .tc-tag-label {
 <div created="20210304080235059" modified="20230227050819433" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20210305051758687" modified="20230618172605344" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Explorer</pre>
+<div created="20210305051758687" modified="20230618183420521" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20210305051741422" modified="20230618181005560" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20210305051741422" modified="20230618183438345" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20230211023053998" modified="20230218001014899" title="$:/state/toc/menu-Brainstorming--1052409904">
 <pre>close</pre>
@@ -10970,7 +10970,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230618182753681" list="unwikified slider Organizations" modified="20230618182834345" title="$:/StoryList">
+<div created="20230618182753681" list="$:/Manager unwikified slider Organizations" modified="20230618183447480" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -15381,15 +15381,17 @@ AKA: Splinters
 ** A sliver of luck cost $100-300, and it takes 25-50 chickens to make a //sliver//.  $500-1000 for a //drop//.  etc.
 ** Packaged in charms see [[Luck Merchants]].</pre>
 </div>
-<div created="20230618181015803" modified="20230618183217131" tags="template" title="slider">
+<div created="20230618181015803" modified="20230618184457327" tags="template" title="slider">
 <pre>\define slider(label)
-&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229E;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229F;&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
+&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/right-arrow}}&amp;#x229E;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/down-arrow}}&amp;#x229F;&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
 &lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
 &lt;$transclude mode=&quot;block&quot; /&gt;
 &lt;/$reveal&gt;
 \end
 
-&lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;</pre>
+&lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;
+
+</pre>
 </div>
 <div created="20230217032003008" modified="20230225193211774" tags="world_building cosmology" title="Soul">
 <pre>* Will exists as the combination of Thought and Memory.
