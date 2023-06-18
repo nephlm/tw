@@ -639,6 +639,8 @@ Error message and password prompt
 
 <li>Slaughterhouses</li>
 
+<li>slider</li>
+
 <li>Soul</li>
 
 <li>SourceSANA Distributors</li>
@@ -10780,8 +10782,7 @@ Menu
 &lt;/div&gt;</pre>
 </div>
 <div created="20230618180406026" modified="20230618180520162" tags="" title="$:/plugins/tongerner/topleftmenu/leftmenu/entries">
-<pre>
-&lt;!--
+<pre>&lt;!--
 The tabs macro below is just for the demo wiki. Remove the tabs macro and add your own left menu entries according to the help below.
 For more information see http://tw5topleft.tiddlyspot.com/.
 --&gt;
@@ -10946,8 +10947,8 @@ html .tc-topmenu .tc-tag-label {
 <div created="20230211023053998" modified="20230218001014899" title="$:/state/toc/menu-Brainstorming--1052409904">
 <pre>close</pre>
 </div>
-<div created="20230202064649878" modified="20230618171803816" title="$:/state/toc/menu-WorldBuilding--1052409904">
-<pre>close</pre>
+<div created="20230202064649878" modified="20230618180849999" title="$:/state/toc/menu-WorldBuilding--1052409904">
+<pre>open</pre>
 </div>
 <div created="20230618173911011" modified="20230618173911011" title="$:/state/toc/menu-WorldBuilding--1072010445">
 <pre>open</pre>
@@ -10967,7 +10968,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230618070052751" list="$:/plugins/tongerner/topleftmenu/leftmenu/entries $:/plugins/tongerner/topleftmenu/leftmenu $:/plugins/tongerner/topleftmenu/left-menu-show-styles Dictionary Numina Tass Nomenclature Binder Imbuer Construct Shard [[Mt. Karcer]] [[Quintessence Craft]] Arcadia" modified="20230618172313849" title="$:/StoryList">
+<div list="slider" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12417,8 +12418,7 @@ Several weeks later a mobster shows up and tells Des that he owes a blood dept f
 * [[Issabelle Thompson]] is his GF.</pre>
 </div>
 <div created="20230225194019630" modified="20230618082535752" tags="world_building thing" title="Dictionary">
-<pre>
-&lt;$list filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt;
+<pre>&lt;$list filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt;
 
 ---
 
@@ -15378,6 +15378,16 @@ AKA: Splinters
 ** There are a lot of animals slaughtered in the United States, but not an unlimited number.
 ** A sliver of luck cost $100-300, and it takes 25-50 chickens to make a //sliver//.  $500-1000 for a //drop//.  etc.
 ** Packaged in charms see [[Luck Merchants]].</pre>
+</div>
+<div created="20230618180852626" modified="20230618180935890" tags="template" title="slider">
+<pre>\define slider(label)
+&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229E;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229F;&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
+&lt;$transclude mode=&quot;block&quot; /&gt;
+&lt;/$reveal&gt;
+\end
+
+&lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;</pre>
 </div>
 <div created="20230217032003008" modified="20230225193211774" tags="world_building cosmology" title="Soul">
 <pre>* Will exists as the combination of Thought and Memory.
