@@ -397,6 +397,8 @@ Error message and password prompt
 
 <li>Drab House</li>
 
+<li>Draft of 'Organizations'</li>
+
 <li>Edwina Rook</li>
 
 <li>Egyptian Soul</li>
@@ -10741,7 +10743,7 @@ margin-right:5px;
      display: none;
 }</pre>
 </div>
-<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230618180428815" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" tags="$:/tags/Stylesheet" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
+<div created="20150710114949541" creator="TonGerner" leftmenu-width="270px" modified="20230618181002897" modifier="TonGerner" scroll-height="700px" story-left="230px" story-width="770px" title="$:/plugins/tongerner/topleftmenu/left-menu-show-styles" top-leftmenu="73px">
 <pre>&lt;pre&gt;/* LEFT MENU */
 /* STORY-RIVER */
 html .tc-story-river {
@@ -10914,8 +10916,8 @@ html .tc-topmenu .tc-tag-label {
 <div created="20230202020751318" modified="20230311014608940" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20230202013716876" modified="20230618180428817" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20230202013716876" modified="20230618181002898" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20230618170559542" modified="20230618170620501" title="$:/state/tab--1963855381">
 <pre>$:/snippets/LayoutSwitcher</pre>
@@ -10941,13 +10943,13 @@ html .tc-topmenu .tc-tag-label {
 <div created="20210305051758687" modified="20230618172605344" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Explorer</pre>
 </div>
-<div created="20210305051741422" modified="20230618171833345" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20210305051741422" modified="20230618181005560" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20230211023053998" modified="20230218001014899" title="$:/state/toc/menu-Brainstorming--1052409904">
 <pre>close</pre>
 </div>
-<div created="20230202064649878" modified="20230618180849999" title="$:/state/toc/menu-WorldBuilding--1052409904">
+<div created="20230202064649878" modified="20230618180946055" title="$:/state/toc/menu-WorldBuilding--1052409904">
 <pre>open</pre>
 </div>
 <div created="20230618173911011" modified="20230618173911011" title="$:/state/toc/menu-WorldBuilding--1072010445">
@@ -10968,7 +10970,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="slider" title="$:/StoryList">
+<div created="20230618180948527" list="slider [[Draft of 'Organizations']]" modified="20230618180948527" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12564,6 +12566,32 @@ Always intrigued by interesting problems and quandaries to think through.  </pre
 The house is far too big for it's one inhabitant, especially when that inhabitant is an old man. The lawn grows to waist height and the front garden shrubs have grown to spill out over the fence. The house badly needs repainting, it's flaking off the walls and window frames. You would mistake the house for derelict if it weren't for the smoke coiling out the chimney. Since buying the house over half a century ago, the owner still has not installed central heating, or even electricity.
 
 This house actually exists, it's a few doors down from my Grandparents' house. The elderly owner died earlier this year; never married, he'd been living alone ever since his twin brother died. </pre>
+</div>
+<div created="20230220044916040" draft.of="Organizations" draft.title="Organizations" modified="20230618180952481" tags="menu" title="Draft of 'Organizations'">
+<pre>|! Primary Organizations|! Major Organizations|! Minor Organizations |
+|^&lt;$list filter=&quot;[tag[primary]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |^&lt;$list filter=&quot;[tag[major]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |^&lt;$list filter=&quot;[tag[minor]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |
+
+!!! Companies
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[company]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+!!! Government
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[government]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!!Trivial 
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[trivial]tag[organization]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+{{WorldBuilding||slider}}</pre>
 </div>
 <div created="20230220181522519" modified="20230220181600152" tags="character trivial ren_troupe" title="Edwina Rook">
 <pre>! The Kid
@@ -15379,7 +15407,7 @@ AKA: Splinters
 ** A sliver of luck cost $100-300, and it takes 25-50 chickens to make a //sliver//.  $500-1000 for a //drop//.  etc.
 ** Packaged in charms see [[Luck Merchants]].</pre>
 </div>
-<div created="20230618180852626" modified="20230618180935890" tags="template" title="slider">
+<div created="20230618181015803" modified="20230618181031011" tags="template" title="slider">
 <pre>\define slider(label)
 &lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229E;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229F;&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
 &lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
