@@ -16008,7 +16008,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619012947461" tags="$:/tags/Macro" title="transclude_list">
+<div created="20230618185834721" modified="20230619013037881" tags="$:/tags/Macro" title="transclude_list">
 <pre>\define tlist(filter)
 &lt;$list filter=&quot;$filter$&quot;&gt;
 &lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
@@ -16016,7 +16016,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 \end
 
 \define dlist(filter, delimiter:&quot;, &quot;)
-&lt;$list filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;
+&lt;$list filter=&quot;$filter$&quot;&gt;
 &lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
 &lt;/$list&gt;
 \end</pre>
