@@ -16011,7 +16011,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619035251897" tags="$:/tags/Macro" title="transclude_list">
+<div created="20230618185834721" modified="20230619035344531" tags="$:/tags/Macro" title="transclude_list">
 <pre>\define stateTiddler(s) &quot;$:/state/$s$
 
 \define tlist(filter)
@@ -16023,7 +16023,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 &lt;$set name=&quot;controlTiddler&quot; value=&lt;$macrocall $name=&quot;stateTiddler&quot; s={{!!title}} /&gt; &gt;
 $:/state/&lt;&lt;controlTiddler&gt;&gt;
 ~{{$:/state/$(controlTiddler)$|| unwikify}}~
-&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=x&lt;$macrocall $name=&quot;stateTiddler&quot; s={{!!title}} /&gt; &gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt; &gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
 &lt;/$set&gt;
 &lt;/$list&gt;
 \end
