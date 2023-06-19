@@ -397,7 +397,7 @@ Error message and password prompt
 
 <li>Drab House</li>
 
-<li>Draft of 'New Tiddler 1'</li>
+<li>Draft of 'transclude_list'</li>
 
 <li>Edwina Rook</li>
 
@@ -10976,7 +10976,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230618182753681" list="unwikified [[Draft of 'New Tiddler 1']] transclude_list slider Organizations" modified="20230619015710262" title="$:/StoryList">
+<div created="20230618182753681" list="unwikified [[New Tiddler 1]] [[Draft of 'transclude_list']] slider Organizations" modified="20230619015710262" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12580,14 +12580,28 @@ The house is far too big for it's one inhabitant, especially when that inhabitan
 
 This house actually exists, it's a few doors down from my Grandparents' house. The elderly owner died earlier this year; never married, he'd been living alone ever since his twin brother died. </pre>
 </div>
-<div created="20230619011955665" draft.of="New Tiddler 1" draft.title="New Tiddler 1" modified="20230619014412659" tags="" title="Draft of 'New Tiddler 1'">
-<pre>&lt;&lt;tlist &quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
+<div created="20230618185834721" draft.of="transclude_list" draft.title="transclude_list" modified="20230619015857715" tags="$:/tags/Macro" title="Draft of 'transclude_list'">
+<pre>
 
----
+\define tlist(filter)
+&lt;$list filter=&quot;$filter$&quot;&gt;
+  &lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+  &lt;$transclude tiddler=&quot;&lt;$view field=&quot;title&quot;&gt;&quot; /&gt;
+&lt;/$list&gt;
+\end
 
-&lt;&lt;dlist &quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
 
-</pre>
+\define dslist(filter, delimiter:&quot;, &quot;)
+&lt;$list filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;
+&lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+&lt;/$list&gt;
+\end
+
+\define dlist(filter, delimiter:&quot;, &quot;)
+&lt;$list filter=&quot;$filter$&quot;&gt;
+&lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+&lt;/$list&gt;
+\end</pre>
 </div>
 <div created="20230220181522519" modified="20230220181600152" tags="character trivial ren_troupe" title="Edwina Rook">
 <pre>! The Kid
@@ -13794,12 +13808,12 @@ Sword magic, gun magic, steel magic, muscle magic, luck magic, writing magic, me
 
 </pre>
 </div>
-<div created="20230619011955665" modified="20230619013048805" tags="" title="New Tiddler 1">
-<pre>&lt;&lt;tlist filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
+<div created="20230619011955665" modified="20230619015902245" tags="" title="New Tiddler 1">
+<pre>&lt;&lt;tlist &quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
 
-&lt;&lt;dlist filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
+---
 
-&lt;&lt;dlist filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
+&lt;&lt;dlist &quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
 
 </pre>
 </div>
