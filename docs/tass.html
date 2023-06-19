@@ -10976,7 +10976,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230619050326504" list="slider_list_js" modified="20230619050326504" title="$:/StoryList">
+<div created="20230619050648425" list="slider_list_js" modified="20230619050648425" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -15413,15 +15413,15 @@ AKA: Splinters
 
 </pre>
 </div>
-<div created="20230619042757519" modified="20230619050516387" module-type="macro" tags="" title="slider_list_js" type="application/javascript">
+<div created="20230619042757519" modified="20230619050857292" module-type="macro" tags="" title="slider_list_js" type="application/javascript">
 <pre>(function(){
 
 
 exports.name = &quot;revealState&quot;;
 
 exports.params = [
-	{name: &quot;key&quot;}
-	{name: &quot;content&quot;}
+	{name: &quot;key&quot;, default:&quot;no&quot;}
+	{name: &quot;content&quot;: default: &quot;no&quot;}
 ];
 
 /*
@@ -15429,6 +15429,8 @@ Run the macro
 */
 exports.run = function(key, content) {
 var ret = &quot;(&quot; + key + &quot; &quot; + content + &quot;)\n&quot;
+
+/*
 ret +='&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/'
 ret += key
 ret+= `&quot; &gt; `
@@ -15436,6 +15438,7 @@ ret+= `&quot; &gt; `
 ret += content
 
 ret += &quot;&lt;/$reveal&gt;&quot;
+*/
 return ret
 };
 
