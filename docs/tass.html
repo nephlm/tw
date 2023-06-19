@@ -15457,21 +15457,30 @@ AKA: Splinters
 
 </pre>
 </div>
-<div created="20230619042757519" modified="20230619045205949" module-type="macro" tags="" title="slider_list_js" type="application/javascript">
+<div created="20230619042757519" modified="20230619045926218" module-type="macro" tags="" title="slider_list_js" type="application/javascript">
 <pre>(function(){
 
 
-exports.name = &quot;t2&quot;;
+exports.name = &quot;revealState&quot;;
 
 exports.params = [
-	{name: &quot;s&quot;}
+	{name: &quot;key&quot;}
+	{name: &quot;content&quot;}
 ];
 
 /*
 Run the macro
 */
-exports.run = function(s) {
-    return &quot;macro'd &quot; + s + &quot;macro'd&quot;
+exports.run = function(key, content) {
+var ret = &quot;&quot;
+ret +=`&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/`
+ret += key
+ret+= `&quot; &gt; `
+
+ret += content
+
+ret += &quot;&lt;/$reveal&gt;&quot;
+return ret
 };
 
 })();</pre>
