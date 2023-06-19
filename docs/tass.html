@@ -397,8 +397,6 @@ Error message and password prompt
 
 <li>Drab House</li>
 
-<li>Draft of 'New Tiddler 1'</li>
-
 <li>Draft of 'slider'</li>
 
 <li>Edwina Rook</li>
@@ -684,6 +682,8 @@ Error message and password prompt
 <li>Tools</li>
 
 <li>Trans World, Inc</li>
+
+<li>transclude_list</li>
 
 <li>Tulpas</li>
 
@@ -10974,7 +10974,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230618182753681" list="[[Draft of 'New Tiddler 1']] Dictionary $:/Manager unwikified [[Draft of 'slider']] Organizations" modified="20230618184557658" title="$:/StoryList">
+<div created="20230618182753681" list="transclude_list [[Draft of 'slider']] Organizations" modified="20230618184557658" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12577,9 +12577,6 @@ Always intrigued by interesting problems and quandaries to think through.  </pre
 The house is far too big for it's one inhabitant, especially when that inhabitant is an old man. The lawn grows to waist height and the front garden shrubs have grown to spill out over the fence. The house badly needs repainting, it's flaking off the walls and window frames. You would mistake the house for derelict if it weren't for the smoke coiling out the chimney. Since buying the house over half a century ago, the owner still has not installed central heating, or even electricity.
 
 This house actually exists, it's a few doors down from my Grandparents' house. The elderly owner died earlier this year; never married, he'd been living alone ever since his twin brother died. </pre>
-</div>
-<div created="20230618185834721" draft.of="New Tiddler 1" draft.title="New Tiddler 1" modified="20230618185834721" tags="" title="Draft of 'New Tiddler 1'">
-<pre></pre>
 </div>
 <div created="20230618181015803" draft.of="slider" draft.title="slider" modified="20230618185810875" tags="template" title="Draft of 'slider'">
 <pre>\define slider(label)
@@ -16013,6 +16010,13 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 </div>
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
+</div>
+<div created="20230618185834721" modified="20230619011947045" tags="$:/tags/Macro" title="transclude_list">
+<pre>\define tlist(filter)
+&lt;$list filter=&quot;$filter$&quot;&gt;
+&lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+&lt;/$list&gt;
+\end</pre>
 </div>
 <div created="20230224181209939" modified="20230224182011944" tags="world_building cosmology" title="Tulpas">
 <pre>Tulpa is a entity that starts in the imagination but is real form by some mechanism.  
