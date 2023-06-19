@@ -397,6 +397,8 @@ Error message and password prompt
 
 <li>Drab House</li>
 
+<li>Draft of 'transclude_list'</li>
+
 <li>Edwina Rook</li>
 
 <li>Egyptian Soul</li>
@@ -10949,8 +10951,8 @@ html .tc-topmenu .tc-tag-label {
 <div created="20210305051758687" modified="20230618183420521" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20210305051741422" modified="20230619044352240" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20210305051741422" modified="20230619052937593" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20230211023053998" modified="20230218001014899" title="$:/state/toc/menu-Brainstorming--1052409904">
 <pre>close</pre>
@@ -10976,7 +10978,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230619052427400" list="transclude_list [[New Tiddler 1]]" modified="20230619052514527" title="$:/StoryList">
+<div created="20230619052427400" list="slider_list_js [[Draft of 'transclude_list']] [[New Tiddler 1]]" modified="20230619052911251" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12579,6 +12581,47 @@ Always intrigued by interesting problems and quandaries to think through.  </pre
 The house is far too big for it's one inhabitant, especially when that inhabitant is an old man. The lawn grows to waist height and the front garden shrubs have grown to spill out over the fence. The house badly needs repainting, it's flaking off the walls and window frames. You would mistake the house for derelict if it weren't for the smoke coiling out the chimney. Since buying the house over half a century ago, the owner still has not installed central heating, or even electricity.
 
 This house actually exists, it's a few doors down from my Grandparents' house. The elderly owner died earlier this year; never married, he'd been living alone ever since his twin brother died. </pre>
+</div>
+<div created="20230618185834721" draft.of="transclude_list" draft.title="transclude_list" modified="20230619052842632" tags="$:/tags/Macro" title="Draft of 'transclude_list'">
+<pre>\define stateTiddler(s) &lt;$text text=&quot;$:/state/&quot; /&gt;$s$
+
+\define r2(key, content)
+&lt;$macrocall $name=&quot;stateTiddler&quot; s=&quot;$key$&quot; /&gt;
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state='&lt;$macrocall $name=&quot;stateTiddler&quot; s=&quot;$key$&quot; /&gt;' &gt; 
+
+$content$
+&lt;/$reveal&gt; 
+\end
+
+
+\define tlist(filter)
+&lt;$list filter=&quot;$filter$&quot;&gt;
+  
+  &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
+  kk &lt;$macrocall $name=&quot;revealState&quot; key={{!!title}} content=&quot;[[edit|Numina]]&quot;  /&gt; kk
+
+
+&lt;/$list&gt;
+\end
+
+
+
+
+\define tlist2(filter)
+&lt;$list filter=&quot;$filter$&quot;&gt;
+  
+  &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
+&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;
+^&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt;^
+&lt;$set name=&quot;controlTiddler&quot; value=&lt;$macrocall $name=&quot;stateTiddler&quot; s={{!!title}} /&gt; &gt;
+$:/state/&lt;&lt;controlTiddler&gt;&gt;
+~{{$:/state/$(controlTiddler)$|| unwikify}}~
+&lt;&lt;r2 Talent &quot;hidden&quot;&gt;&gt;
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt; &gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
+&lt;/$set&gt;
+&lt;/$list&gt;
+\end
+</pre>
 </div>
 <div created="20230220181522519" modified="20230220181600152" tags="character trivial ren_troupe" title="Edwina Rook">
 <pre>! The Kid
@@ -15413,37 +15456,35 @@ AKA: Splinters
 
 </pre>
 </div>
-<div created="20230619042757519" modified="20230619052326844" module-type="macro" tags="" title="slider_list_js" type="application/javascript">
-<pre>(function(){
+<div created="20230619042757519" modified="20230619053459490" module-type="macro" tags="" title="slider_list_js" type="application/javascript">
+<pre>(function () {
+  exports.name = &quot;revealState&quot;;
 
+  exports.params = [
+    { name: &quot;key&quot;, default: &quot;no&quot; },
+    { name: &quot;content&quot;, default: &quot;no&quot; },
+  ];
 
-    exports.name = &quot;revealState&quot;;
-
-    exports.params = [
-        {name: &quot;key&quot;, default:&quot;no&quot;},
-        {name: &quot;content&quot;, default: &quot;no&quot;}
-    ];
-
-    /*
+  /*
     Run the macro
     */
-    exports.run = function(key, content) {
+  exports.run = function (key, content) {
+    var statusTiddler = &quot;$:/state/&quot; + key;
 
-    var ret = &quot;(&quot; + key + &quot; &quot; + content + &quot;)\n&quot;
+    var ret = &quot;(&quot; + key + &quot; &quot; + content + &quot; &quot; + statusTiddler + &quot;)\n&quot;;
 
-    ret +='&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/'
-    ret += key
-    ret+= `&quot; &gt; `
+    ret += '&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;';
+    ret += statusTiddler;
+    ret += '&quot; &gt; ';
 
-    ret += content
+    ret += content;
 
-    ret += &quot;&lt;/$reveal&gt;&quot;
+    ret += &quot;&lt;/$reveal&gt;&quot;;
 
-    return ret
-
-    };
-
-    })();</pre>
+    return ret;
+  };
+})();
+</pre>
 </div>
 <div created="20230217032003008" modified="20230225193211774" tags="world_building cosmology" title="Soul">
 <pre>* Will exists as the combination of Thought and Memory.
