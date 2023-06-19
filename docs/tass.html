@@ -16011,7 +16011,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619030014899" tags="$:/tags/Macro" title="transclude_list">
+<div created="20230618185834721" modified="20230619030037722" tags="$:/tags/Macro" title="transclude_list">
 <pre>
 
 \define tlist(filter)
@@ -16020,7 +16020,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
   &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
 &lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;
 &lt;$set name=&quot;controlTiddler&quot; value=&quot;foo&quot;&gt;
-$(controlTiddler)$
+$controlTiddler$
 &lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$title$&quot; &gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
 &lt;/$set&gt;
 &lt;/$list&gt;
