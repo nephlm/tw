@@ -12580,12 +12580,11 @@ The house is far too big for it's one inhabitant, especially when that inhabitan
 
 This house actually exists, it's a few doors down from my Grandparents' house. The elderly owner died earlier this year; never married, he'd been living alone ever since his twin brother died. </pre>
 </div>
-<div created="20230619011955665" draft.of="New Tiddler 1" draft.title="New Tiddler 1" modified="20230619013126259" tags="" title="Draft of 'New Tiddler 1'">
-<pre>&lt;&lt;tlist filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
+<div created="20230619011955665" draft.of="New Tiddler 1" draft.title="New Tiddler 1" modified="20230619013439050" tags="" title="Draft of 'New Tiddler 1'">
+<pre>&lt;&lt;tlist &quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
 
-&lt;&lt;dslist filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
 
-&lt;&lt;dlist filter=&quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
+&lt;&lt;dlist &quot;[tag[dictionary]sort[title]]&quot;&gt;&gt;
 
 </pre>
 </div>
@@ -16019,10 +16018,15 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619013328669" tags="$:/tags/Macro" title="transclude_list">
-<pre>\define tlist(filter)
+<div created="20230618185834721" modified="20230619014132030" tags="$:/tags/Macro" title="transclude_list">
+<pre>\define tslider(tidler)
+
+\end
+
+\define tlist(filter)
 &lt;$list filter=&quot;$filter$&quot;&gt;
 &lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+&lt;$transclude &lt;&lt;currentTiddler&gt;&gt;&gt;
 &lt;/$list&gt;
 \end
 
@@ -16034,7 +16038,6 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 \end
 
 \define dlist(filter, delimiter:&quot;, &quot;)
-$filter$
 &lt;$list filter=&quot;$filter$&quot;&gt;
 &lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
 &lt;/$list&gt;
