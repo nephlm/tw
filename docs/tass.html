@@ -10978,7 +10978,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230618182753681" list="[[Draft of 'unwikified']] [[New Tiddler 1]] transclude_list [[Draft of 'slider']] Organizations" modified="20230619030505016" title="$:/StoryList">
+<div created="20230618182753681" list="[[Draft of 'unwikified']] [[New Tiddler 1]] transclude_list [[Draft of 'slider']] Organizations" modified="20230619031039929" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -16025,7 +16025,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619031022890" tags="$:/tags/Macro" title="transclude_list">
+<div created="20230618185834721" modified="20230619031147741" tags="$:/tags/Macro" title="transclude_list">
 <pre>
 
 \define tlist(filter)
@@ -16033,7 +16033,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
   
   &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
 &lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;
-&lt;$set name=&quot;controlTiddler&quot; value=&quot;$:/state/ {{!!title}}&quot; &gt;
+&lt;$set name=&quot;controlTiddler&quot; value=&quot;&lt;$view field=&quot;title&quot;/&gt;&quot; &gt;
 &lt;&lt;controlTiddler&gt;&gt;
 &lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;&lt;&lt;controlTiddler&gt;&gt;&quot; &gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
 &lt;/$set&gt;
