@@ -397,6 +397,8 @@ Error message and password prompt
 
 <li>Drab House</li>
 
+<li>Draft of 'transclude_list'</li>
+
 <li>Edwina Rook</li>
 
 <li>Egyptian Soul</li>
@@ -529,8 +531,6 @@ Error message and password prompt
 
 <li>New Tiddler 1</li>
 
-<li>New Tiddler 2</li>
-
 <li>Niles Snow</li>
 
 <li>Niles Snow 1 - One Paragraph</li>
@@ -644,6 +644,8 @@ Error message and password prompt
 <li>Slaughterhouses</li>
 
 <li>slider</li>
+
+<li>slider_list_js</li>
 
 <li>Soul</li>
 
@@ -10976,7 +10978,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230619044903584" list="[[New Tiddler 2]] [[New Tiddler 1]]" modified="20230619044913336" title="$:/StoryList">
+<div created="20230619045038976" list="slider_list_js [[Draft of 'transclude_list']]" modified="20230619045143872" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12580,6 +12582,48 @@ The house is far too big for it's one inhabitant, especially when that inhabitan
 
 This house actually exists, it's a few doors down from my Grandparents' house. The elderly owner died earlier this year; never married, he'd been living alone ever since his twin brother died. </pre>
 </div>
+<div created="20230618185834721" draft.of="transclude_list" draft.title="transclude_list" modified="20230619045129498" tags="$:/tags/Macro" title="Draft of 'transclude_list'">
+<pre>\define stateTiddler(s) &lt;$text text=&quot;$:/state/&quot; /&gt;$s$
+
+\define r2(key, content)
+&lt;$macrocall $name=&quot;stateTiddler&quot; s=&quot;$key$&quot; /&gt;
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state='&lt;$macrocall $name=&quot;stateTiddler&quot; s=&quot;$key$&quot; /&gt;' &gt; 
+
+$content$
+&lt;/$reveal&gt; 
+\end
+
+
+\define tlist(filter)
+&lt;$list filter=&quot;$filter$&quot;&gt;
+  
+  &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
+  kk &lt;$macrocall $name=&quot;t2&quot; s=&quot;too&quot;  /&gt; kk
+ ll &lt;&lt;t2 &quot;foo&quot; &gt;&gt; ll
+
+&lt;&lt;r2 Talent &quot;hidden&quot;&gt;&gt;
+&lt;/$list&gt;
+\end
+
+
+
+
+\define tlist2(filter)
+&lt;$list filter=&quot;$filter$&quot;&gt;
+  
+  &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
+&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;
+^&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt;^
+&lt;$set name=&quot;controlTiddler&quot; value=&lt;$macrocall $name=&quot;stateTiddler&quot; s={{!!title}} /&gt; &gt;
+$:/state/&lt;&lt;controlTiddler&gt;&gt;
+~{{$:/state/$(controlTiddler)$|| unwikify}}~
+&lt;&lt;r2 Talent &quot;hidden&quot;&gt;&gt;
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt; &gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
+&lt;/$set&gt;
+&lt;/$list&gt;
+\end
+</pre>
+</div>
 <div created="20230220181522519" modified="20230220181600152" tags="character trivial ren_troupe" title="Edwina Rook">
 <pre>! The Kid
 
@@ -13791,25 +13835,6 @@ Sword magic, gun magic, steel magic, muscle magic, luck magic, writing magic, me
 
 
 </pre>
-</div>
-<div created="20230619042757519" modified="20230619044930932" module-type="macro" tags="" title="New Tiddler 2" type="application/javascript">
-<pre>(function(){
-
-
-exports.name = &quot;t2&quot;;
-
-exports.params = [
-	{name: &quot;s&quot;}
-];
-
-/*
-Run the macro
-*/
-exports.run = function(s) {
-    return &quot;macro'd &quot; + s + &quot;macro'd&quot;
-};
-
-})();</pre>
 </div>
 <div created="20230304023656158" modified="20230309034327664" tags="character minor karcer syndicate" title="Niles Snow">
 <pre>Son of [[Micheal Snow]].  He's six and in first grade. 
@@ -15431,6 +15456,25 @@ AKA: Splinters
 &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;
 
 </pre>
+</div>
+<div created="20230619042757519" modified="20230619045205949" module-type="macro" tags="" title="slider_list_js" type="application/javascript">
+<pre>(function(){
+
+
+exports.name = &quot;t2&quot;;
+
+exports.params = [
+	{name: &quot;s&quot;}
+];
+
+/*
+Run the macro
+*/
+exports.run = function(s) {
+    return &quot;macro'd &quot; + s + &quot;macro'd&quot;
+};
+
+})();</pre>
 </div>
 <div created="20230217032003008" modified="20230225193211774" tags="world_building cosmology" title="Soul">
 <pre>* Will exists as the combination of Thought and Memory.
