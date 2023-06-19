@@ -399,7 +399,7 @@ Error message and password prompt
 
 <li>Draft of 'New Tiddler 1'</li>
 
-<li>Draft of 'slider'</li>
+<li>Draft of 'transclude_list'</li>
 
 <li>Edwina Rook</li>
 
@@ -10978,7 +10978,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230618182753681" list="unwikified [[Draft of 'New Tiddler 1']] transclude_list [[Draft of 'slider']] Organizations" modified="20230619021533195" title="$:/StoryList">
+<div created="20230618182753681" list="unwikified [[Draft of 'New Tiddler 1']] [[Draft of 'transclude_list']] slider Organizations" modified="20230619021533195" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12589,16 +12589,17 @@ This house actually exists, it's a few doors down from my Grandparents' house. T
 
 </pre>
 </div>
-<div created="20230618181015803" draft.of="slider" draft.title="slider" modified="20230619021309383" tags="template $:/tags/Macro" title="Draft of 'slider'">
-<pre>\define slider(label)
-&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/right-arrow}}&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/down-arrow}}&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
-&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
-&lt;$transclude mode=&quot;block&quot; /&gt;
-&lt;/$reveal&gt;
+<div created="20230618185834721" draft.of="transclude_list" draft.title="transclude_list" modified="20230619021836453" tags="$:/tags/Macro" title="Draft of 'transclude_list'">
+<pre>
+
+\define tlist(filter)
+&lt;$list filter=&quot;$filter$&quot;&gt;
+&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;
+  &lt;$transclude mode=&quot;block&quot; /&gt;
+   Hello
+  &lt;$macrocall $name=&quot;slider&quot; label=&quot;Numina&quot;  /&gt;
+&lt;/$list&gt;
 \end
-
-&lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;
-
 </pre>
 </div>
 <div created="20230220181522519" modified="20230220181600152" tags="character trivial ren_troupe" title="Edwina Rook">
@@ -15422,7 +15423,7 @@ AKA: Splinters
 ** A sliver of luck cost $100-300, and it takes 25-50 chickens to make a //sliver//.  $500-1000 for a //drop//.  etc.
 ** Packaged in charms see [[Luck Merchants]].</pre>
 </div>
-<div created="20230618181015803" modified="20230618184527012" tags="template" title="slider">
+<div created="20230618181015803" modified="20230619021858822" tags="template $:/tags/Macro" title="slider">
 <pre>\define slider(label)
 &lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/right-arrow}}&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/down-arrow}}&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
 &lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
