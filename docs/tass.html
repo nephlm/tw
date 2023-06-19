@@ -397,8 +397,6 @@ Error message and password prompt
 
 <li>Drab House</li>
 
-<li>Draft of 'transclude_list'</li>
-
 <li>Edwina Rook</li>
 
 <li>Egyptian Soul</li>
@@ -10978,7 +10976,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230619052427400" list="slider_list_js [[Draft of 'transclude_list']] [[New Tiddler 1]]" modified="20230619052911251" title="$:/StoryList">
+<div created="20230619052427400" list="slider_list_js transclude_list [[New Tiddler 1]]" modified="20230619052911251" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12581,47 +12579,6 @@ Always intrigued by interesting problems and quandaries to think through.  </pre
 The house is far too big for it's one inhabitant, especially when that inhabitant is an old man. The lawn grows to waist height and the front garden shrubs have grown to spill out over the fence. The house badly needs repainting, it's flaking off the walls and window frames. You would mistake the house for derelict if it weren't for the smoke coiling out the chimney. Since buying the house over half a century ago, the owner still has not installed central heating, or even electricity.
 
 This house actually exists, it's a few doors down from my Grandparents' house. The elderly owner died earlier this year; never married, he'd been living alone ever since his twin brother died. </pre>
-</div>
-<div created="20230618185834721" draft.of="transclude_list" draft.title="transclude_list" modified="20230619052842632" tags="$:/tags/Macro" title="Draft of 'transclude_list'">
-<pre>\define stateTiddler(s) &lt;$text text=&quot;$:/state/&quot; /&gt;$s$
-
-\define r2(key, content)
-&lt;$macrocall $name=&quot;stateTiddler&quot; s=&quot;$key$&quot; /&gt;
-&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state='&lt;$macrocall $name=&quot;stateTiddler&quot; s=&quot;$key$&quot; /&gt;' &gt; 
-
-$content$
-&lt;/$reveal&gt; 
-\end
-
-
-\define tlist(filter)
-&lt;$list filter=&quot;$filter$&quot;&gt;
-  
-  &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
-  kk &lt;$macrocall $name=&quot;revealState&quot; key={{!!title}} content=&quot;[[edit|Numina]]&quot;  /&gt; kk
-
-
-&lt;/$list&gt;
-\end
-
-
-
-
-\define tlist2(filter)
-&lt;$list filter=&quot;$filter$&quot;&gt;
-  
-  &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
-&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;
-^&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt;^
-&lt;$set name=&quot;controlTiddler&quot; value=&lt;$macrocall $name=&quot;stateTiddler&quot; s={{!!title}} /&gt; &gt;
-$:/state/&lt;&lt;controlTiddler&gt;&gt;
-~{{$:/state/$(controlTiddler)$|| unwikify}}~
-&lt;&lt;r2 Talent &quot;hidden&quot;&gt;&gt;
-&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt; &gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
-&lt;/$set&gt;
-&lt;/$list&gt;
-\end
-</pre>
 </div>
 <div created="20230220181522519" modified="20230220181600152" tags="character trivial ren_troupe" title="Edwina Rook">
 <pre>! The Kid
@@ -16081,7 +16038,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619052747399" tags="$:/tags/Macro" title="transclude_list">
+<div created="20230618185834721" modified="20230619053504098" tags="$:/tags/Macro" title="transclude_list">
 <pre>\define stateTiddler(s) &lt;$text text=&quot;$:/state/&quot; /&gt;$s$
 
 \define r2(key, content)
