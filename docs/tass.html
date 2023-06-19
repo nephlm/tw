@@ -16024,7 +16024,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619043359826" tags="$:/tags/Macro" title="transclude_list">
+<div created="20230618185834721" modified="20230619043500539" tags="$:/tags/Macro" title="transclude_list">
 <pre>\define stateTiddler(s) &lt;$text text=&quot;$:/state/&quot; /&gt;$s$
 
 \define r2(key, content)
@@ -16041,6 +16041,7 @@ $content$
   
   &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
   kk &lt;$macrocall $name=&quot;t2&quot; s=&quot;{{!!title}}&quot;  /&gt; kk
+ ll &lt;&lt;t2 &quot;foo&quot; &gt;&gt;
 
 &lt;&lt;r2 Talent &quot;hidden&quot;&gt;&gt;
 &lt;/$list&gt;
