@@ -10976,7 +10976,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20230619052427400" list="slider slider_list_js transclude_list [[New Tiddler 1]]" modified="20230619053718320" title="$:/StoryList">
+<div created="20230619052427400" list="slider slider_list_js transclude_list [[New Tiddler 1]]" modified="20230619053818016" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -16039,45 +16039,14 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619053759434" tags="$:/tags/Macro" title="transclude_list">
-<pre>\define stateTiddler(s) &lt;$text text=&quot;$:/state/&quot; /&gt;$s$
-
-\define r2(key, content)
-&lt;$macrocall $name=&quot;stateTiddler&quot; s=&quot;$key$&quot; /&gt;
-&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state='&lt;$macrocall $name=&quot;stateTiddler&quot; s=&quot;$key$&quot; /&gt;' &gt; 
-
-$content$
-&lt;/$reveal&gt; 
-\end
-
-
-\define tlist(filter)
+<div created="20230618185834721" modified="20230619053855898" tags="$:/tags/Macro" title="transclude_list">
+<pre>\define tlist(filter)
 &lt;$list filter=&quot;$filter$&quot;&gt;
-  
   &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
-
-
-
 &lt;/$list&gt;
 \end
 
 
-
-
-\define tlist2(filter)
-&lt;$list filter=&quot;$filter$&quot;&gt;
-  
-  &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
-&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;
-^&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt;^
-&lt;$set name=&quot;controlTiddler&quot; value=&lt;$macrocall $name=&quot;stateTiddler&quot; s={{!!title}} /&gt; &gt;
-$:/state/&lt;&lt;controlTiddler&gt;&gt;
-~{{$:/state/$(controlTiddler)$|| unwikify}}~
-&lt;&lt;r2 Talent &quot;hidden&quot;&gt;&gt;
-&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&lt;$macrocall $name=&quot;stateTiddler&quot; s=&lt;&lt;currentTiddler&gt;&gt; /&gt; &gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
-&lt;/$set&gt;
-&lt;/$list&gt;
-\end
 </pre>
 </div>
 <div created="20230224181209939" modified="20230224182011944" tags="world_building cosmology" title="Tulpas">
