@@ -12582,7 +12582,7 @@ The house is far too big for it's one inhabitant, especially when that inhabitan
 
 This house actually exists, it's a few doors down from my Grandparents' house. The elderly owner died earlier this year; never married, he'd been living alone ever since his twin brother died. </pre>
 </div>
-<div created="20230618181015803" draft.of="slider" draft.title="slider" modified="20230619022524501" tags="template $:/tags/Macro" title="Draft of 'slider'">
+<div created="20230618181015803" draft.of="slider" draft.title="slider" modified="20230619023215760" tags="template $:/tags/Macro" title="Draft of 'slider'">
 <pre>\define slider(label)
 &lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;tc-btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/right-arrow}}&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;{{$:/core/images/down-arrow}}&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
 &lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot; style=&quot;border: 1px solid #666;&quot;&gt;
@@ -16025,7 +16025,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
 <div created="20230221040021991" modified="20230221040134622" tags="organization company" title="Trans World, Inc">
 <pre>Operates long range Transport Glyphs, mostly cross-country and intercontinental.</pre>
 </div>
-<div created="20230618185834721" modified="20230619023057605" tags="$:/tags/Macro" title="transclude_list">
+<div created="20230618185834721" modified="20230619023257677" tags="$:/tags/Macro" title="transclude_list">
 <pre>
 
 \define tlist(filter)
@@ -16033,7 +16033,7 @@ Getting kickbacks to transfer expired and bad drugs to the [[Kozlov Crew]].  In 
   
   &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}  /&gt;
 &lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;
-&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=$:/state/{{!!title}}&gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/&quot; + {{!!title}}&gt;Only show while open: {{!!title}}&lt;/$reveal&gt; 
 &lt;/$list&gt;
 \end
 </pre>
