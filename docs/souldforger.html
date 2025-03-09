@@ -225,9 +225,13 @@ Error message and password prompt
 
 <li>$:/UploadName</li>
 
+<li>Draft of 'TiddlerFooter'</li>
+
 <li>StyleSheet</li>
 
 <li>TiddlerFooter</li>
+
+<li>TiddlerFooterBacklinks</li>
 
 </ul>
 </p>
@@ -10571,7 +10575,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="TiddlerFooter" title="$:/StoryList">
+<div list="TiddlerFooterBacklinks [[Draft of 'TiddlerFooter']]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10801,6 +10805,10 @@ html .tc-topmenu .tc-tag-label {
 <div created="20160515025643037" modified="20160515025645229" title="$:/UploadName">
 <pre>greatmaker</pre>
 </div>
+<div created="20250309222548907" draft.of="TiddlerFooter" draft.title="TiddlerFooter" modified="20250309222713662" tags="$:/tags/ViewTemplate" title="Draft of 'TiddlerFooter'">
+<pre>&lt;hr&gt;
+&lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;[all[shadows+tiddlers]tag[TiddlerFooter]!has[draft.of]]&quot; default=&quot;TiddlerFooterBacklinks&quot;/&gt;</pre>
+</div>
 <div created="20161103012630026" modified="20161103012802676" tags="$:/tags/Stylesheet" title="StyleSheet">
 <pre>/* text alignments */
 .left
@@ -11026,6 +11034,13 @@ html .tc-topmenu .tc-tag-label {
 <div created="20250309222548907" modified="20250309222618068" tags="$:/tags/ViewTemplate" title="TiddlerFooter">
 <pre>&lt;hr&gt;
 &lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;[all[shadows+tiddlers]tag[TiddlerFooter]!has[draft.of]]&quot; default=&quot;TiddlerFooterBacklinks&quot;/&gt;</pre>
+</div>
+<div created="20250309222623821" modified="20250309222749476" tags="TiddlerFooter" title="TiddlerFooterBacklinks">
+<pre>Backlinks:
+
+@@.threecolumns
+&lt;$list filter=&quot;[all[current]backlinks[]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 
 
