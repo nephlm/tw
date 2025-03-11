@@ -201,6 +201,8 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/tab-1290083694</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -274,6 +276,8 @@ Error message and password prompt
 <li>TiddlerFooter</li>
 
 <li>TiddlerFooterBacklinks</li>
+
+<li>TiddlerFooterFields</li>
 
 <li>World Building</li>
 
@@ -10607,6 +10611,9 @@ html .tc-topmenu .tc-tag-label {
 <div created="20250309231637591" modified="20250309231637591" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
+<div created="20250311182559229" modified="20250311182604417" title="$:/state/tab-1290083694">
+<pre>$:/core/ui/TiddlerInfo/Fields</pre>
+</div>
 <div created="20210304080231971" modified="20250309223130319" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
@@ -10625,7 +10632,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250309224843541" list="[[Jacob Herne]] [[Kristen Ring]] [[Micheal Snow]] Syndicate Characters [[Alexander Duvall]] [[Draft of 'Relationship Queue']] [[Shining Way]] [[Numinal Restoration]]" modified="20250311181237137" title="$:/StoryList">
+<div created="20250309224843541" list="TiddlerFooterFields TiddlerFooterBacklinks TiddlerFooter [[Jacob Herne]] [[Kristen Ring]] [[Micheal Snow]] Syndicate Characters [[Alexander Duvall]] [[Draft of 'Relationship Queue']] [[Shining Way]] [[Numinal Restoration]]" modified="20250311182942507" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10902,7 +10909,7 @@ Adoptees/Snippets
 
 </pre>
 </div>
-<div created="20250310075451636" draft.of="Relationship Queue" draft.title="Relationship Queue" modified="20250311181854879" tags="menu" title="Draft of 'Relationship Queue'">
+<div created="20250310075451636" draft.of="Relationship Queue" draft.title="Relationship Queue" modified="20250311182142254" tags="menu" title="Draft of 'Relationship Queue'">
 <pre>
 * Prophet
 ** A new [[NRM]] that might be legitimate, or might be the efforts of a DemonTouched
@@ -10910,7 +10917,7 @@ Adoptees/Snippets
 ** Two [[NRM]]s vying for the service of an Old God.
 * Four Pillars of the Status Quo
 ** [[Alexander Duvall]] -  Bishop or other leader of the christian church
-** Chief of Police
+** [[Jacob Herne]] - Chief of Police
 ** [[Kristen Ring]] - Local billionaire
 ** [[Micheal Snow]] - Syndicate
 
@@ -11298,6 +11305,13 @@ Although the organizations work together because their interests are aligned, th
 @@.threecolumns
 &lt;$list filter=&quot;[all[current]backlinks[]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
 @@</pre>
+</div>
+<div created="20250311182951498" modified="20250311183211428" tags="TiddlerFooter" title="TiddlerFooterFields">
+<pre>&lt;table class=&quot;tc-view-field-table&quot;&gt;
+&lt;tbody&gt;
+&lt;$list filter=&quot;[all[current]fields[]sort[title]] -text -created -draft.of -draft.title -tags -title&quot; template=&quot;$:/core/ui/TiddlerFieldTemplate&quot; variable=&quot;listItem&quot;/&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</pre>
 </div>
 <div created="20250309225450090" modified="20250309225526513" tags="menu" title="World Building">
 <pre>!!! Government
