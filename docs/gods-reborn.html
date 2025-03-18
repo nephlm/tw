@@ -10584,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[The U]]" modified="20250318190059098" title="$:/StoryList">
+<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations Tinkertown" modified="20250318190119144" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11876,11 +11876,25 @@ Each of the schools here has its own academic  libraries, most have special coll
 &lt;/tbody&gt;
 &lt;/table&gt;</pre>
 </div>
-<div created="20250314061436374" modified="20250318073038363" tags="location karcer neighborhood public" title="Tinkertown">
+<div created="20250314061436374" modified="20250318190126915" tags="location karcer neighborhood public" title="Tinkertown">
 <pre>* Technically called Okton
 * Area fawned over by start-ups and its workers.   Near both the University District and the Reservoir.
 * E of [[Riviera]], W of [[Reservoir]], N of [[The U]].
-</pre>
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250315041808414" modified="20250318072344498" tags="location karcer minor [[Karcer City]] public" title="Toe Market">
 <pre>* In the last generation this was location of the [[Fish Market]], but that has long since moved to [[Port of Karcer]] as the commercial fishing vessel started berthing there.
