@@ -10584,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[City West]]" modified="20250318185640439" title="$:/StoryList">
+<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations Elizabethtown" modified="20250318185705872" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10968,10 +10968,24 @@ Located in [[City West]].</pre>
 <pre>* Dorn Pyramid - pyramid shaped mausoleum bearing the words “DISTURB NOT THE SLEEP OF DEATH”.
 ** Inspired by: https://www.atlasobscura.com/places/the-dorn-pyramid-san-luis-obispo-california</pre>
 </div>
-<div created="20250314060336248" modified="20250318073758297" tags="karcer location neighborhood public" title="Elizabethtown">
+<div created="20250314060336248" modified="20250318185715069" tags="karcer location neighborhood public" title="Elizabethtown">
 <pre>* This area caters to recreational uses of the bay.  
 * Marinas, swimming, etc all cluster around the bay and reservoir on this side. 
- </pre>
+ 
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250315192034224" modified="20250318185459939" tags="location karcer landmark public Bounty" title="Experimental Structures Lab">
 <pre>* Experimental Structures Lab - Large area far from the city owned by UC Karcer’s architecture department in which students build experimental structures and see how they function in the real world.  There is an annual festival with competition. 
