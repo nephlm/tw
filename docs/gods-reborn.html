@@ -10584,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[Port of Karcer]]" modified="20250318185930519" title="$:/StoryList">
+<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations Reservoir" modified="20250318185943524" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11493,12 +11493,27 @@ Located in [[City West]].</pre>
 ---
 </pre>
 </div>
-<div created="20250314060127201" modified="20250318073028847" tags="karcer location neighborhood public" title="Reservoir">
+<div created="20250314060127201" modified="20250318185956315" tags="karcer location neighborhood public" title="Reservoir">
 <pre>* There is an actual dam and reservoir here.
 * Used to be old industrial buildings.  Many have been renovated into night clubs, lofts and hip offices.
 * It is now the up and coming gentrified area where all the night life and new restaurants are. 
 * There is power and water infrastructure here.
-* On the other side of the Dam is [[Elizabethtown]], E of [[Tinkertown]].</pre>
+* On the other side of the Dam is [[Elizabethtown]], E of [[Tinkertown]].
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250314055909536" modified="20250318072947598" tags="karcer location neighborhood public" title="Riviera">
 <pre>* Continuing East along the south of the bay, just past [[South Bridge]] is Riviera, 
