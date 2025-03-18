@@ -407,6 +407,8 @@ Error message and password prompt
 
 <li>Union Hill</li>
 
+<li>Vanderhorn</li>
+
 <li>Whitmore Grand Library</li>
 
 <li>Willowbend Asylum Museum</li>
@@ -10610,7 +10612,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="Steamworks Rockburg [[Port of Karcer]] [[North Bridge]] Maston Grayshore [[Jensen's Corner]] Eckhart Cresthaven [[Union Hill]] Silwood Riviera Palisades [[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318191804235" title="$:/StoryList">
+<div created="20250315193619176" list="Vanderhorn Steamworks Rockburg [[Port of Karcer]] [[North Bridge]] Maston Grayshore [[Jensen's Corner]] Eckhart Cresthaven [[Union Hill]] Silwood Riviera Palisades [[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318191804235" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -12185,6 +12187,27 @@ If you need some mistletoe harvested by a holy person under a full moon, you can
 <div created="20250318191039939" modified="20250318191108286" tags="neighborhood location karcer public" title="Union Hill">
 <pre>* Residential, middle class covering the middle 50% in terms of socio-economics.
 * Strong sense of community
+
+
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
+</div>
+<div created="20250318192027900" modified="20250318192109055" tags="location karcer neighborhood public" title="Vanderhorn">
+<pre>* Large single family houses occupied by professionals working in [[Jensen's Corner]]. 
+
 
 
 
