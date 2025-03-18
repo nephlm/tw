@@ -301,6 +301,8 @@ Error message and password prompt
 
 <li>Ghost Girls</li>
 
+<li>Grayshore</li>
+
 <li>Hallowmere Island</li>
 
 <li>Jacob Herne</li>
@@ -10602,7 +10604,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Jensen's Corner]] Eckhart Cresthaven [[Union Hill]] Silwood Riviera Palisades [[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318191337177" title="$:/StoryList">
+<div created="20250315193619176" list="Grayshore [[Jensen's Corner]] Eckhart Cresthaven [[Union Hill]] Silwood Riviera Palisades [[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318191337177" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11140,6 +11142,28 @@ Located in [[Bounty]]</pre>
 </div>
 <div created="20250318080250463" modified="20250318181407291" tags="karcer location trivial public Reservoir" title="Ghost Girls">
 <pre>* Lost Girls - Nightclub, restaurant and cultural center dedicated to Karcer's most famous ghost and urban legend.</pre>
+</div>
+<div created="20250318191435268" modified="20250318191512148" tags="neighborhood location karcer public Northside" title="Grayshore">
+<pre>* A transitional area between Elizabethtown and Port of Karcer.
+* Technically one of the most diverse communities in Karcer, but it is a pretty clear gradient of wealth with higher income people living near Elizabethtown and trailer parks near the Port of Karcer. 
+
+
+
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250314054548803" modified="20250318185802219" tags="location neighborhood karcer public" title="Hallowmere Island">
 <pre>* The two spans of the bridge both abut to Hallowmere island where there is about 1/2 mile of road before hitting the other bridge. 
