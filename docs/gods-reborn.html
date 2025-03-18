@@ -10584,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations Santiago" modified="20250318190026534" title="$:/StoryList">
+<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[South Bridge]] Santiago" modified="20250318190043604" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11570,10 +11570,25 @@ Many in the Shining Way believe the supposed returning old gods are nothing more
 
 Although the organizations work together because their interests are aligned, their intents and world views can be quite different, causing a distinct lack of trust.</pre>
 </div>
-<div created="20250314053515690" modified="20250318074026298" tags="location karcer neighborhood public" title="South Bridge">
+<div created="20250314053515690" modified="20250318190053524" tags="location karcer neighborhood public" title="South Bridge">
 <pre>* Neighborhood around the South bridge abutment.
 * [[Bridge]],[[Hallowmere Island]], [[North Bridge]]
-</pre>
+
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20161103012630026" modified="20161103012802676" tags="$:/tags/Stylesheet" title="StyleSheet">
 <pre>/* text alignments */
