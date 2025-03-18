@@ -10584,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[Fort Jacobs]]" modified="20250318185723278" title="$:/StoryList">
+<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[Hallowmere Island]]" modified="20250318185751949" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11043,13 +11043,28 @@ Located in [[Bounty]]</pre>
 <div created="20250318080250463" modified="20250318181407291" tags="karcer location trivial public Reservoir" title="Ghost Girls">
 <pre>* Lost Girls - Nightclub, restaurant and cultural center dedicated to Karcer's most famous ghost and urban legend.</pre>
 </div>
-<div created="20250314054548803" modified="20250318081032403" tags="location neighborhood karcer public" title="Hallowmere Island">
+<div created="20250314054548803" modified="20250318185802219" tags="location neighborhood karcer public" title="Hallowmere Island">
 <pre>* The two spans of the bridge both abut to Hallowmere island where there is about 1/2 mile of road before hitting the other bridge. 
 * It's an iconic location to take photos of [[Mt. Karcer]] and the city. 
 * Bridges connect to [[North Bridge]] and [[South Bridge]]
 * The whole island is an outdoor sculpture garden.  
 ** There is a  giant troll emerging from the ground under the southern abutment.    No one knows who made the statue but he's been adopted as a city wide icon. 
-*** Known as &quot;Tassiter the Troll&quot; or &quot;Tass&quot; or &quot;Tassie&quot; for short.</pre>
+*** Known as &quot;Tassiter the Troll&quot; or &quot;Tass&quot; or &quot;Tassie&quot; for short.
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250311181939711" high-concept="Police Commissioner" modified="20250318072359131" tags="character minor public" title="Jacob Herne">
 <pre>&lt;$transclude tiddler=&quot;CharacterHeader&quot;/&gt;
