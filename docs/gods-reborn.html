@@ -10584,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[Nesbit Hills]]" modified="20250318185902397" title="$:/StoryList">
+<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[North Bridge]]" modified="20250318185918537" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11337,9 +11337,24 @@ Adoptees/Snippets
 
 &lt;$list filter=&quot;[tag[NRM]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; </pre>
 </div>
-<div created="20250314055218741" modified="20250318072827844" tags="location karcer neighborhood public" title="North Bridge">
+<div created="20250314055218741" modified="20250318185926016" tags="location karcer neighborhood public" title="North Bridge">
 <pre>* Neighborhood around where the [[Bridge]] abuts in the North.
-* Adjacent to [[Jensen's Corner]].</pre>
+* Adjacent to [[Jensen's Corner]].
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250310071645273" modified="20250318073239314" tags="organization minor NRM public" title="Numinal Restoration">
 <pre>Umbrella organization for a large number of religious organizations that believe if mankind affords the returned gods the worship and respect they are due, then all of the worlds problems will be solved by the returned gods. </pre>
