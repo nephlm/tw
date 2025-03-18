@@ -285,6 +285,8 @@ Error message and password prompt
 
 <li>Draft of 'Arcadia'</li>
 
+<li>Eckhart</li>
+
 <li>Elizabethtown</li>
 
 <li>Experimental Structures Lab</li>
@@ -10600,7 +10602,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="Cresthaven [[Union Hill]] Silwood Riviera Palisades [[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318190811700" title="$:/StoryList">
+<div created="20250315193619176" list="[[Jensen's Corner]] Eckhart Cresthaven [[Union Hill]] Silwood Riviera Palisades [[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318191337177" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11026,6 +11028,28 @@ Located in [[City West]].</pre>
 </div>
 <div created="20250315192454835" draft.of="Arcadia" draft.title="Arcadia" modified="20250318190457249" tags="location karcer neighborhood public" title="Draft of 'Arcadia'">
 <pre>Wooded national park about an hour north of [[Karcer]].
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
+</div>
+<div created="20250318191242786" modified="20250318191419067" tags="neighborhood location karcer public Northside" title="Eckhart">
+<pre>* A mix of working class and early career professionals working in [[Jensen's Corner]].
+
+
+
+
 
 &lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
 
