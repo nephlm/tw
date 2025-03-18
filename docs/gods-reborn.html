@@ -10584,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[Karcer City]] Bounty Arcadia" modified="20250318185623917" title="$:/StoryList">
+<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[City West]]" modified="20250318185640439" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10903,10 +10903,24 @@ Adoptees/Snippets
 &lt;$list filter=&quot;[tag[snippet]tag[character]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
 @@</pre>
 </div>
-<div created="20250314051925622" modified="20250318073702091" tags="location neighborhood karcer public" title="City West">
+<div created="20250314051925622" modified="20250318185648820" tags="location neighborhood karcer public" title="City West">
 <pre>* It is one of the oldest parts of the city and where most of the civic buildings are located. 
 * Technically named Kingsville.
-</pre>
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250318080513578" modified="20250318180949264" tags="karcer location landmark public [[The U]]" title="Columbus Park of Roses">
 <pre>* Columbus Park of Roses - product of the horticulture department, a 12 acre facility to breed new and different roses.  There are 12,000 roses of every known species. 
