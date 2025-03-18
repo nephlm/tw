@@ -315,6 +315,8 @@ Error message and password prompt
 
 <li>Kristen Ring</li>
 
+<li>Lakeside Grove</li>
+
 <li>Landmarks</li>
 
 <li>Locations</li>
@@ -10590,7 +10592,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318190327825" title="$:/StoryList">
+<div created="20250315193619176" list="[[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318190327825" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11248,6 +11250,26 @@ Located in [[Elizabethtown]].</pre>
 
 * Local Billionaire.
 * Stole tech, used at the basis of much of magitech and used that to become ridiculously wealthy. </pre>
+</div>
+<div created="20250318190612832" modified="20250318190716387" tags="neighborhood location karcer public" title="Lakeside Grove">
+<pre>* Insular community
+* Home to the [[Zoo]].
+
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250315190104439" modified="20250318075347751" tags="menu" title="Landmarks">
 <pre>* Cupid's Bow Park - https://www.msn.com/en-us/travel/tripideas/15-overlooked-landmarks-in-the-u-s-that-deserve-the-spotlight/ss-BB1re3ku#image=4
