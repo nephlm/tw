@@ -279,6 +279,8 @@ Error message and password prompt
 
 <li>Dorn Pyramid</li>
 
+<li>Draft of 'Arcadia'</li>
+
 <li>Elizabethtown</li>
 
 <li>Experimental Structures Lab</li>
@@ -332,6 +334,8 @@ Error message and password prompt
 <li>Numinal Restoration</li>
 
 <li>Numinology</li>
+
+<li>Oldgate</li>
 
 <li>Organizations</li>
 
@@ -10575,7 +10579,7 @@ html .tc-topmenu .tc-tag-label {
 <div created="20210305051758687" modified="20250318061411996" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20210305051741422" modified="20250318071219495" title="$:/state/tab/sidebar--595412856">
+<div created="20210305051741422" modified="20250318190202201" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20250309223645604" modified="20250309223645604" title="$:/state/toc/menu-Test1--1052409904">
@@ -10584,7 +10588,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations Tinkertown" modified="20250318190119144" title="$:/StoryList">
+<div created="20250315193619176" list="Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318190327825" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10967,6 +10971,24 @@ Located in [[City West]].</pre>
 <div created="20250318075742776" modified="20250318181054364" tags="location landmark public [[Karcer City]]" title="Dorn Pyramid">
 <pre>* Dorn Pyramid - pyramid shaped mausoleum bearing the words “DISTURB NOT THE SLEEP OF DEATH”.
 ** Inspired by: https://www.atlasobscura.com/places/the-dorn-pyramid-san-luis-obispo-california</pre>
+</div>
+<div created="20250315192454835" draft.of="Arcadia" draft.title="Arcadia" modified="20250318190457249" tags="location karcer neighborhood public" title="Draft of 'Arcadia'">
+<pre>Wooded national park about an hour north of [[Karcer]].
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250314060336248" modified="20250318185715069" tags="karcer location neighborhood public" title="Elizabethtown">
 <pre>* This area caters to recreational uses of the bay.  
@@ -11361,6 +11383,26 @@ Adoptees/Snippets
 </div>
 <div created="20250314063108798" modified="20250318074216560" tags="world_building thing public" title="Numinology">
 <pre>* One of the names that has come to describe what once might have been called magic. </pre>
+</div>
+<div created="20250318190257510" modified="20250318190532619" tags="neighborhood location karcer public" title="Oldgate">
+<pre>* Inner-city like neighborhood, mostly low income.
+* Cramped apartments and tenements. 
+* TD Bank Arena that hosts the [[Karcer Trolls]] (Hockey).
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250309225237289" modified="20250318061512279" tags="menu public" title="Organizations">
 <pre>|! Primary Organizations|! Major Organizations|! Minor Organizations |
