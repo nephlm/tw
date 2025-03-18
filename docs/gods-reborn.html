@@ -11039,7 +11039,7 @@ https://www.atlasobscura.com/places/morro-bay-maritime-museum
 
 Located in [[Elizabethtown]].</pre>
 </div>
-<div created="20250314051308979" modified="20250318184101339" tags="location karcer neighborhood public" title="Karcer City">
+<div created="20250314051308979" modified="20250318184213681" tags="location karcer neighborhood public" title="Karcer City">
 <pre>* Oldest part of the city, at the base of [[Mt. Karcer]]
 
 
@@ -11057,7 +11057,7 @@ Landmarks
 @@.threecolumns
 \define currentTag() {!!title}
 &lt;$set name=&quot;currentTitle&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
-&lt;$list filter=&quot;[tag[landmark]tag[location]tag[&lt;currentTiddler&gt;]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag[{!!title}]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
 @@
 </pre>
 </div>
