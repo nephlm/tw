@@ -215,6 +215,8 @@ Error message and password prompt
 
 <li>$:/state/tab-2113255710</li>
 
+<li>$:/state/tab-715663742</li>
+
 <li>$:/state/tab-795701734</li>
 
 <li>$:/state/tab/moresidebar-1850697562</li>
@@ -10564,6 +10566,9 @@ html .tc-topmenu .tc-tag-label {
 <div created="20250311184041520" modified="20250311184041520" title="$:/state/tab-2113255710">
 <pre>TiddlerFooterFields</pre>
 </div>
+<div created="20250318181800442" modified="20250318181803468" title="$:/state/tab-715663742">
+<pre>TiddlerFooterBacklinks</pre>
+</div>
 <div created="20250311183219604" modified="20250311185404478" title="$:/state/tab-795701734">
 <pre>TiddlerFooterBacklinks</pre>
 </div>
@@ -10579,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="Locations [[Whitmore Grand Library]]" modified="20250318181446266" title="$:/StoryList">
+<div created="20250315193619176" list="[[Mr. Smalls Funhouse]] [[Karcer City]]" modified="20250318182351217" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11034,9 +11039,26 @@ https://www.atlasobscura.com/places/morro-bay-maritime-museum
 
 Located in [[Elizabethtown]].</pre>
 </div>
-<div created="20250314051308979" modified="20250318072743313" tags="location karcer neighborhood public" title="Karcer City">
+<div created="20250314051308979" modified="20250318184101339" tags="location karcer neighborhood public" title="Karcer City">
 <pre>* Oldest part of the city, at the base of [[Mt. Karcer]]
-* West of [[City West]], NW of [[San Pedro]], 20 min North of [[Fort Jacobs]]
+
+
+Landmarks
+
+&lt;$text text=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+&lt;$view field=&quot;title&quot; /&gt;
+&lt;currentTitle&gt;
+&lt;currentTiddler&gt;
+
+
+
+
+
+@@.threecolumns
+\define currentTag() {!!title}
+&lt;$set name=&quot;currentTitle&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag[&lt;currentTiddler&gt;]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
 </pre>
 </div>
 <div created="20250314063218253" modified="20250318072732648" tags="karcer location neighborhood public" title="Karcer Underground">
