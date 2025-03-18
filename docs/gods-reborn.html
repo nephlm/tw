@@ -327,6 +327,8 @@ Error message and password prompt
 
 <li>Locations</li>
 
+<li>Maston</li>
+
 <li>Micheal Snow</li>
 
 <li>Mr. Smalls Funhouse</li>
@@ -10604,7 +10606,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="Grayshore [[Jensen's Corner]] Eckhart Cresthaven [[Union Hill]] Silwood Riviera Palisades [[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318191337177" title="$:/StoryList">
+<div created="20250315193619176" list="Maston Grayshore [[Jensen's Corner]] Eckhart Cresthaven [[Union Hill]] Silwood Riviera Palisades [[Lakeside Grove]] [[Ashford Commons]] Oldgate [[Draft of 'Arcadia']] [[Experimental Structures Lab]] Locations Tinkertown" modified="20250318191337177" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11414,6 +11416,29 @@ Adoptees/Snippets
 
 
 </pre>
+</div>
+<div created="20250318191549655" modified="20250318191644126" tags="neighborhood location karcer public Northside" title="Maston">
+<pre>* Middle class residential.  
+*Working class people who work in the [[Port of Karcer]] or [[Jensen's Corner]].
+
+
+
+
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250311180726347" high-concept="Syndicate CEO" modified="20250311185449425" tags="character minor syndicate" title="Micheal Snow">
 <pre>&lt;$transclude tiddler=&quot;CharacterHeader&quot;/&gt;
