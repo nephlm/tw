@@ -10584,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[Jensen's Corner]]" modified="20250318185808299" title="$:/StoryList">
+<div created="20250315193619176" list="[[Experimental Structures Lab]] Locations [[Karcer Underground]]" modified="20250318185831107" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11160,7 +11160,7 @@ Located in [[Elizabethtown]].</pre>
 @@
 </pre>
 </div>
-<div created="20250314063218253" modified="20250318072732648" tags="karcer location neighborhood public" title="Karcer Underground">
+<div created="20250314063218253" modified="20250318185844869" tags="karcer location neighborhood public" title="Karcer Underground">
 <pre>Strata of Karcer Underground
 
 * Modern Subway 
@@ -11183,7 +11183,22 @@ Located in [[Elizabethtown]].</pre>
 * Lava Tubes
 ** The highways of the underground are the lava tubes radiating out from [[Mt. Karcer]].
 ** There is a major branch under [[UC Karcer]], which means students get in there all the time. 
-</pre>
+
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250311181502166" high-concept="Untouchable Billionaire" modified="20250318072419794" tags="character minor public" title="Kristen Ring">
 <pre>&lt;$transclude tiddler=&quot;CharacterHeader&quot;/&gt;
