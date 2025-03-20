@@ -253,6 +253,8 @@ Error message and password prompt
 
 <li>Ashford Commons</li>
 
+<li>b1</li>
+
 <li>Bounty</li>
 
 <li>Bridge</li>
@@ -284,6 +286,8 @@ Error message and password prompt
 <li>Dorn Pyramid</li>
 
 <li>Draft of 'Dorn Pyramid'</li>
+
+<li>Draft of 'extra_style'</li>
 
 <li>Eckhart</li>
 
@@ -10614,7 +10618,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250320165627806" list="extra_style [[Henderson Memorial Park]] Locations [[Karcer City]] [[Draft of 'Dorn Pyramid']] Karcer" modified="20250320171815857" title="$:/StoryList">
+<div created="20250320165627806" list="b1 [[Draft of 'extra_style']] [[Henderson Memorial Park]] Locations [[Karcer City]] [[Draft of 'Dorn Pyramid']] Karcer" modified="20250320171815857" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10898,6 +10902,11 @@ html .tc-topmenu .tc-tag-label {
 &lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
 @@</pre>
 </div>
+<div created="20250320173525283" modified="20250320173843358" tags="" title="b1" type="">
+<pre>\define b1(text)
+&lt;div class=&quot;box&quot;&gt;&lt;&lt;text&gt;&gt;&lt;/div&gt;
+\end</pre>
+</div>
 <div created="20250315192228171" modified="20250318192714944" tags="karcer location neighborhood public Exoburb" title="Bounty">
 <pre>Farming community far NE of the Bay.  About half way to [[Arcadia]].
 
@@ -11046,7 +11055,7 @@ Located in [[City West]].</pre>
 <pre>* Dorn Pyramid - pyramid shaped mausoleum bearing the words “DISTURB NOT THE SLEEP OF DEATH”.
 ** Inspired by: https://www.atlasobscura.com/places/the-dorn-pyramid-san-luis-obispo-california</pre>
 </div>
-<div created="20250318075742776" draft.of="Dorn Pyramid" draft.title="Thorn Pyramid" high-concept="Unsealed mausoleum spawning urban legends." modified="20250320171805617" tags="location landmark public [[Karcer City]] urban_legend" title="Draft of 'Dorn Pyramid'">
+<div created="20250318075742776" draft.of="Dorn Pyramid" draft.title="Thorn Pyramid" high-concept="Unsealed mausoleum spawning urban legends." modified="20250320173826821" tags="location landmark public [[Karcer City]] urban_legend" title="Draft of 'Dorn Pyramid'">
 <pre>&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
 
 {{CharacterHeader}}
@@ -11056,10 +11065,40 @@ One of the few remnants of the old [[cemeteries]].  It was built in the late 180
 The pyramid is a massive stone mausoleum with two stones left out of place waiting for Horatio to join his wife and son, but he was never interred there.   Where Horatio ended up is a matter of urban legend and opinion. 
 
 
-@@.box
-* Thorn Pyramid - pyramid shaped mausoleum bearing the words “DISTURB NOT THE SLEEP OF DEATH”.
-** Inspired by: https://www.atlasobscura.com/places/the-dorn-pyramid-san-luis-obispo-california
-@@</pre>
+
+Thorn Pyramid - pyramid shaped mausoleum bearing the words “DISTURB NOT THE SLEEP OF DEATH”.  
+
+Inspired by: https://www.atlasobscura.com/places/the-dorn-pyramid-san-luis-obispo-california
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20250318064320683" draft.of="extra_style" draft.title="extra_style" modified="20250320172337489" tags="$:/tags/Stylesheet" title="Draft of 'extra_style'">
+<pre>.gm {
+    border: 2px solid #aaa;
+    border-radius: 1em;
+    background-color: #d9c9c7;
+    padding-left: .5em;
+    padding-right: .5em
+
+}
+
+.player {
+    border: 2px solid #aaa;
+    border-radius: 1em;
+    background-color: #c9d6c7;
+    padding-left: .5em;
+    padding-right: .5em
+
+}
+
+.box {
+    border: 2px solid #aaa;
+    border-radius: 1em;
+    background-color: #ddd;
+    padding-left: .5em;
+    padding-right: .5em
+
+}</pre>
 </div>
 <div created="20250318191242786" modified="20250318195742827" tags="neighborhood location karcer public Northside" title="Eckhart">
 <pre>* A mix of working class and early career professionals working in [[Jensen's Corner]].
