@@ -10900,12 +10900,13 @@ html .tc-topmenu .tc-tag-label {
 &lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
 @@</pre>
 </div>
-<div created="20250320173525283" modified="20250320180208151" tags="" title="b1" type="">
+<div created="20250320173525283" modified="20250320180242424" tags="" title="b1" type="">
 <pre>\define b1(content)
-  &lt;$set name=&quot;parsedContent&quot; value=&lt;&lt;content&gt;&gt;&gt;
-    &lt;div class=&quot;box&quot;&gt;&lt;$text text=&lt;&lt;parsedContent&gt;&gt;/&gt;&lt;/div&gt;
-  &lt;/$set&gt;
-\end</pre>
+  &lt;$wikify name=&quot;processedContent&quot; text=&lt;&lt;content&gt;&gt;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;$text text=&lt;&lt;processedContent&gt;&gt;/&gt;&lt;/div&gt;
+  &lt;/$wikify&gt;
+\end
+</pre>
 </div>
 <div created="20250315192228171" modified="20250318192714944" tags="karcer location neighborhood public Exoburb" title="Bounty">
 <pre>Farming community far NE of the Bay.  About half way to [[Arcadia]].
