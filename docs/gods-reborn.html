@@ -283,6 +283,10 @@ Error message and password prompt
 
 <li>Dorn Pyramid</li>
 
+<li>Draft of 'Alexander Duvall'</li>
+
+<li>Draft of 'Elizabethtown'</li>
+
 <li>Draft of 'New Tiddler'</li>
 
 <li>Eckhart</li>
@@ -10612,7 +10616,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250315193619176" list="CharacterHeader [[Alexander Duvall]] [[Draft of 'New Tiddler']] Landmarks Locations [[Karcer Bay Mariner Museum]] [[Digger Archaeological Site]] Karcer [[Jensen's Corner]] Elizabethtown Eckhart Cresthaven" modified="20250320074239438" title="$:/StoryList">
+<div created="20250315193619176" list="CharacterHeader [[Draft of 'Alexander Duvall']] [[Draft of 'New Tiddler']] Landmarks Locations [[Karcer Bay Mariner Museum]] [[Digger Archaeological Site]] Karcer [[Jensen's Corner]] [[Draft of 'Elizabethtown']] Eckhart Cresthaven" modified="20250320074239438" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10935,8 +10939,8 @@ html .tc-topmenu .tc-tag-label {
 
 Located in [[City West]].</pre>
 </div>
-<div created="20250311184542543" modified="20250311185144045" tags="" title="CharacterHeader">
-<pre>&lt;$list filter=&quot;[&lt;currentTiddler&gt;get[high-concept]]&quot; variable=value&gt;
+<div created="20250311184542543" modified="20250320074617318" tags="" title="CharacterHeader">
+<pre>&lt;$list filter=&quot;[&lt;currentTag&gt;get[high-concept]]&quot; variable=value&gt;
 ''High Concept:'' &lt;&lt;value&gt;&gt;
 &lt;/$list&gt;
 
@@ -11045,6 +11049,45 @@ Located in [[City West]].</pre>
 <div created="20250318075742776" modified="20250318181054364" tags="location landmark public [[Karcer City]]" title="Dorn Pyramid">
 <pre>* Dorn Pyramid - pyramid shaped mausoleum bearing the words “DISTURB NOT THE SLEEP OF DEATH”.
 ** Inspired by: https://www.atlasobscura.com/places/the-dorn-pyramid-san-luis-obispo-california</pre>
+</div>
+<div created="20250311180146978" draft.of="Alexander Duvall" draft.title="Alexander Duvall" high-concept="Bishop of the City" modified="20250320074540950" tags="character minor public" title="Draft of 'Alexander Duvall'">
+<pre>&lt;$list filter=&quot;[&lt;currentTiddler&gt;get[high-concept]]&quot; variable=value&gt;
+''High Concept:'' &lt;&lt;value&gt;&gt;
+&lt;/$list&gt;
+
+---
+
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+{{CharacterHeader}}
+
+---
+
+* Bishop of the Diocese of the city.  
+* Presiding over a crumbling base.
+* Hostile toward [[NRM]]s, though he pretends to be less hostile than he is. </pre>
+</div>
+<div created="20250314060336248" draft.of="Elizabethtown" draft.title="Elizabethtown" modified="20250320074401423" tags="karcer location neighborhood public Northside" title="Draft of 'Elizabethtown'">
+<pre>* This area caters to recreational uses of the bay.  
+* Marinas, swimming, etc all cluster around the bay and reservoir on this side. 
+* Everything is Elizabethtown is quaint and tourist accessible.
+* They are squeezed by the port on one side and [[Steamworks]] on the other, even with [[Grayshore]] as a buffer between the [[Port of Karcer]] its not exactly an ideal recreational spot, but Elizabethtown was there before the port an the [[Bridge]], 
+** The residents fear for the future of Elizabethtown.
+ 
+&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+!!! Locations
+
+@@.threecolumns
+&lt;$list filter=&quot;[!tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+
+!!! Landmarks
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20250320072857256" draft.of="New Tiddler" draft.title="Henderson Memorial Park" high-concept="1,000+ acre urban park." modified="20250320074218473" tags="neighborhood location karcer Southside" title="Draft of 'New Tiddler'" type="">
 <pre>Henderson Memorial Park is a 1,000+ acre urban park near [[Reservoir]] and the actual reservoir.
