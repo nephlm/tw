@@ -285,6 +285,8 @@ Error message and password prompt
 
 <li>Draft of 'extra_style'</li>
 
+<li>Draft of 'Thorn Pyramid'</li>
+
 <li>Eckhart</li>
 
 <li>Elizabethtown</li>
@@ -10616,7 +10618,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20250320165627806" list="b1 [[Draft of 'extra_style']] [[Henderson Memorial Park]] Locations [[Karcer City]] [[Thorn Pyramid]] Karcer" modified="20250320171815857" title="$:/StoryList">
+<div created="20250320165627806" list="b1 [[Draft of 'extra_style']] [[Henderson Memorial Park]] Locations [[Karcer City]] [[Draft of 'Thorn Pyramid']] Karcer" modified="20250320171815857" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10900,8 +10902,8 @@ html .tc-topmenu .tc-tag-label {
 &lt;$list filter=&quot;[tag[landmark]tag[location]tag&lt;currentTag&gt;sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
 @@</pre>
 </div>
-<div created="20250320173525283" modified="20250320175736557" tags="" title="b1" type="">
-<pre>\define box(content)
+<div created="20250320173525283" modified="20250320180208151" tags="" title="b1" type="">
+<pre>\define b1(content)
   &lt;$set name=&quot;parsedContent&quot; value=&lt;&lt;content&gt;&gt;&gt;
     &lt;div class=&quot;box&quot;&gt;&lt;$text text=&lt;&lt;parsedContent&gt;&gt;/&gt;&lt;/div&gt;
   &lt;/$set&gt;
@@ -11078,6 +11080,26 @@ Located in [[City West]].</pre>
     padding-right: .5em
 
 }</pre>
+</div>
+<div created="20250318075742776" draft.of="Thorn Pyramid" draft.title="Thorn Pyramid" high-concept="Unsealed mausoleum spawning urban legends." modified="20250320175751331" tags="location landmark public [[Karcer City]] urban_legend" title="Draft of 'Thorn Pyramid'">
+<pre>&lt;$set name=&quot;currentTag&quot; value={{{ [&lt;currentTiddler&gt;] }}}&gt;
+
+{{CharacterHeader}}
+
+One of the few remnants of the old [[cemeteries]].  It was built in the late 1800's by a wealthy trader, [[Horatio Thorn]], in remembrance of his late wife.  
+
+The pyramid is a massive stone mausoleum with two stones left out of place waiting for Horatio to join his wife and son, but he was never interred there.   Where Horatio ended up is a matter of urban legend and opinion. 
+
+&lt;&lt;b1 ''Bold text'' and a [[wiki link]].
+
+This is a new paragraph.&gt;&gt;
+&quot;&quot;&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;&lt;output&gt;&gt;&lt;/div&gt;
+&lt;/$wikify&gt;
+
+&lt;$wikify name=&quot;output&quot; text= Thorn Pyramid - pyramid shaped mausoleum bearing the words “DISTURB NOT THE SLEEP OF DEATH”.  
+
+Inspired by: https://www.atlasobscura.com/places/the-dorn-pyramid-san-luis-obispo-california&gt;&gt;</pre>
 </div>
 <div created="20250318191242786" modified="20250318195742827" tags="neighborhood location karcer public Northside" title="Eckhart">
 <pre>* A mix of working class and early career professionals working in [[Jensen's Corner]].
