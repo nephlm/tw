@@ -227,6 +227,8 @@ Error message and password prompt
 
 <li>$:/UploadName</li>
 
+<li>Characters</li>
+
 <li>Cities</li>
 
 <li>ERR</li>
@@ -10582,7 +10584,7 @@ html .tc-topmenu .tc-tag-label {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20260324021925043" list="$:/SiteSubtitle Notes Cities [[Rules Tweaks]] ERR" modified="20260325192430072" title="$:/StoryList">
+<div created="20260324021925043" list="Characters Notes Cities [[Rules Tweaks]] ERR" modified="20260325192430072" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10811,6 +10813,46 @@ html .tc-topmenu .tc-tag-label {
 </div>
 <div created="20160515025643037" modified="20160515025645229" title="$:/UploadName">
 <pre>greatmaker</pre>
+</div>
+<div created="20260325194116707" modified="20260325194138248" tags="menu public" title="Characters">
+<pre>&lt;!--
+
+|! Primary Characters|! Major Characters|! Minor Characters |
+|^&lt;$list filter=&quot;[tag[primary]tag[character]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |^&lt;$list filter=&quot;[tag[major]tag[character]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |^&lt;$list filter=&quot;[tag[minor]tag[character]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; |
+--&gt;
+!! Prmary
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Location&lt;/th&gt;&lt;th&gt;High Concept&lt;/th&gt;&lt;/tr&gt;
+&lt;$list filter=&quot;[tag[primary]tag[character]sort[title]]&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt; &lt;/td&gt;&lt;td&gt; &lt;$view field=&quot;high-concept&quot; /&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/$list&gt; 
+&lt;/table&gt;
+
+!! Major
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Location&lt;/th&gt;&lt;th&gt;High Concept&lt;/th&gt;&lt;/tr&gt;
+&lt;$list filter=&quot;[tag[major]tag[character]sort[title]]&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt; &lt;/td&gt;&lt;td&gt; &lt;$view field=&quot;high-concept&quot; /&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/$list&gt; 
+&lt;/table&gt;
+
+!! Minor
+
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Location&lt;/th&gt;&lt;th&gt;High Concept&lt;/th&gt;&lt;/tr&gt;
+&lt;$list filter=&quot;[tag[minor]tag[character]sort[title]]&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt; &lt;/td&gt;&lt;td&gt; &lt;$view field=&quot;high-concept&quot; /&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/$list&gt; 
+&lt;/table&gt;
+
+
+Trivial
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[trivial]tag[character]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@
+
+Adoptees/Snippets
+
+@@.threecolumns
+&lt;$list filter=&quot;[tag[snippet]tag[character]sort[title]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$link&gt;&lt;br&gt;&lt;/$list&gt; 
+@@</pre>
 </div>
 <div created="20260324190300982" modified="20260324230433761" tags="private" title="Cities">
 <pre>“Any metro area that contains at least two of the following was targetted:
